@@ -22,6 +22,10 @@ options.DATA_OPT = 0;
 % Video player object to display video
 player = vision.DeployableVideoPlayer('Location', [20, 400]);
 
+% Create a streaming point cloud viewer
+point_cloud_viewer = pcplayer([-3, 3], [-3, 3], [0, 8], ...
+    'VerticalAxis', 'y', 'VerticalAxisDir', 'down');
+
 % Setup the live stream for the webcams
 if options.LIVE_STREAM
     % Create the right and left webcam objects
@@ -56,10 +60,6 @@ end
 if options.PEOPLE_DETECTOR
     peopleDetector = vision.PeopleDetector('MinSize', [166 83]);
 end
-
-% Create a streaming point cloud viewer
-point_cloud_viewer = pcplayer([-3, 3], [-3, 3], [0, 8], ...
-    'VerticalAxis', 'y', 'VerticalAxisDir', 'down');
 
 %% ========================== Run the Loop ================================
 
