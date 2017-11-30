@@ -12,9 +12,9 @@ clear; close all; clc
 
 % Options
 options.RUN_VISION = true;
-options.LIVE_STREAM = false;
+options.LIVE_STREAM = true;
 options.PEOPLE_DETECTOR = false;
-options.DATA_FILE = true;
+options.DATA_FILE = true&~options.LIVE_STREAM;
 options.DATA_OPT = 0;
 
 %% =============================== Setup ==================================
@@ -29,12 +29,16 @@ point_cloud_viewer = pcplayer([-3, 3], [-3, 3], [0, 8], ...
 % Setup the live stream for the webcams
 if options.LIVE_STREAM
     % Create the right and left webcam objects
-    left_cam = webcam(2);
-    right_cam = webcam(3);
+    left_cam = webcam('UVC Camera (046d:0825)');
+    right_cam = webcam('UVC Camera (046d:0825)');
+    
+    % Load the calibration data
+    data_string = 'handshake';
+    load([data_string,'StereoParams.mat']);
 end
 
 % Load data from a file
-if options.DATA_FILE && ~options.LIVE_STREAM
+if options.DATA_FILE
     
     % Case structure to select the data to be used
     switch options.DATA_OPT
@@ -74,7 +78,7 @@ while (options.RUN_VISION && options.LIVE_STREAM) ||...
     end
     
     % Read the frames from the data file
-    if options.DATA_FILE && ~options.LIVE_STREAM
+    if options.DATA_FILE
         frame_data.frameLeft = readerLeft.step();
         frame_data.frameRight = readerRight.step();
     end
@@ -88,12 +92,8 @@ while (options.RUN_VISION && options.LIVE_STREAM) ||...
     % View the point cloud
     view(point_cloud_viewer, point_data.point_cloud);
     
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    % We will need to add in the logic to deal with the 
-    % point cloud data and find stair heights here
-    %
+    % Gets object data from the point cloud
     object_data = GetObjectData(point_data);
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     
     % Show the distance to the nearest person if there is one
     if options.PEOPLE_DETECTOR
@@ -103,12 +103,13 @@ while (options.RUN_VISION && options.LIVE_STREAM) ||...
         % Display the frame.
         step(player, dispFrame);
     end
+    options.RUN_VISION = false;
 end
 
 %% ========================= Clean Up and Exit ============================
 % Clean up
 clear('right_cam');
 clear('left_cam');
-reset(readerLeft);
-reset(readerRight);
+%reset(readerLeft);
+%reset(readerRight);
 release(player);
