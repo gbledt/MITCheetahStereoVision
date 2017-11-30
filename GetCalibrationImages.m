@@ -1,8 +1,6 @@
 % Gets a set of image pairs and saves them to folders for the 
 % calibration app to use.
 
-% Run stereoCameraCalibrator to get to the app.
-
 vid_left = videoinput('winvideo', 2);
 vid_right = videoinput('winvideo', 3);
 
@@ -28,3 +26,6 @@ for i = 1:NUM_IMAGES
         pause(5);
         close all;
 end
+
+% Run the command below to do the calibation.
+stereoCameraCalibrator('images/left','images/right',22.15,'millimeters');
