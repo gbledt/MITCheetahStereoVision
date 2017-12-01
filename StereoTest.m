@@ -16,6 +16,8 @@ options.LIVE_STREAM = true;
 options.PEOPLE_DETECTOR = false;
 options.DATA_FILE = true&~options.LIVE_STREAM;
 options.DATA_OPT = 0;
+options.RECEIVE_LCM = false;
+options.BROADCAST_LCM = false;
 
 %% =============================== Setup ==================================
 
@@ -23,18 +25,18 @@ options.DATA_OPT = 0;
 player = vision.DeployableVideoPlayer('Location', [20, 400]);
 
 % Create a streaming point cloud viewer
-point_cloud_viewer = pcplayer([-3, 3], [-3, 3], [0, 8], ...
+point_cloud_viewer = pcplayer([-30, 30], [-30, 30], [0, 80], ...
     'VerticalAxis', 'y', 'VerticalAxisDir', 'down');
 
 % Setup the live stream for the webcams
 if options.LIVE_STREAM
     % Create the right and left webcam objects
-    left_cam = webcam('UVC Camera (046d:0825)');
-    right_cam = webcam('UVC Camera (046d:0825)');
+    left_cam = webcam(1);
+    right_cam = webcam(2);
     
     % Load the calibration data
-    data_string = 'handshake';
-    load([data_string,'StereoParams.mat']);
+    data_string = 'stereoParams';
+    load([data_string,'.mat']);
 end
 
 % Load data from a file
@@ -71,10 +73,17 @@ end
 while (options.RUN_VISION && options.LIVE_STREAM) ||...
         (options.DATA_FILE && (~isDone(readerLeft) && ~isDone(readerRight)))
     
+    % Receive LCM options from main GUI
+    if options.RECEIVE_LCM
+        
+    end
+    
     % Read the frames from the webcams
     if options.LIVE_STREAM
         frame_data.frameLeft = snapshot(left_cam);
         frame_data.frameRight = snapshot(right_cam);
+        %imshow(frame_data.frameLeft)
+        %imshow(frame_data.frameRight)
     end
     
     % Read the frames from the data file
@@ -103,13 +112,23 @@ while (options.RUN_VISION && options.LIVE_STREAM) ||...
         % Display the frame.
         step(player, dispFrame);
     end
-    options.RUN_VISION = false;
+    
+    % Broadcast out the LCM messages containing object data
+    if options.BROADCAST_LCM
+        
+    end
 end
 
 %% ========================= Clean Up and Exit ============================
 % Clean up
-clear('right_cam');
-clear('left_cam');
-%reset(readerLeft);
-%reset(readerRight);
+if options.LIVE_STREAM
+    clear('right_cam');
+    clear('left_cam');
+end
+
+if options.DATA_FILE
+    reset(readerLeft);
+    reset(readerRight);
+end
+
 release(player);
