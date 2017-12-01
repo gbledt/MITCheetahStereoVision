@@ -18,6 +18,7 @@ options.DATA_FILE = true&~options.LIVE_STREAM;
 options.DATA_OPT = 0;
 options.RECEIVE_LCM = false;
 options.BROADCAST_LCM = false;
+options.LOOP_RATE = 1;  % Hz
 
 %% =============================== Setup ==================================
 
@@ -25,14 +26,14 @@ options.BROADCAST_LCM = false;
 player = vision.DeployableVideoPlayer('Location', [20, 400]);
 
 % Create a streaming point cloud viewer
-point_cloud_viewer = pcplayer([-30, 30], [-30, 30], [0, 80], ...
+point_cloud_viewer = pcplayer([-3, 3], [-3, 3], [0, 8], ...
     'VerticalAxis', 'y', 'VerticalAxisDir', 'down');
 
 % Setup the live stream for the webcams
 if options.LIVE_STREAM
     % Create the right and left webcam objects
-    left_cam = webcam(1);
-    right_cam = webcam(2);
+   left_cam = webcam(2);
+   right_cam = webcam(1);
     
     % Load the calibration data
     data_string = 'stereoParams';
@@ -66,6 +67,10 @@ end
 if options.PEOPLE_DETECTOR
     peopleDetector = vision.PeopleDetector('MinSize', [166 83]);
 end
+
+% Timing
+loop_timer = tic;
+t0 = toc(loop_timer);
 
 %% ========================== Run the Loop ================================
 
@@ -102,7 +107,10 @@ while (options.RUN_VISION && options.LIVE_STREAM) ||...
     view(point_cloud_viewer, point_data.point_cloud);
     
     % Gets object data from the point cloud
-    object_data = GetObjectData(point_data);
+    point_data = ProcessRobotData(point_data);
+    
+    % Gets object data from the point cloud
+%     object_data = GetObjectData(point_data);
     
     % Show the distance to the nearest person if there is one
     if options.PEOPLE_DETECTOR
@@ -117,6 +125,10 @@ while (options.RUN_VISION && options.LIVE_STREAM) ||...
     if options.BROADCAST_LCM
         
     end
+    
+    while ((toc(loop_timer) - t0) < 1/options.LOOP_RATE),end;
+    
+     t0 = toc(loop_timer)
 end
 
 %% ========================= Clean Up and Exit ============================
