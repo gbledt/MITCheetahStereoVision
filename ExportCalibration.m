@@ -1,5 +1,4 @@
 % Place image pairs in images/left/ and images/right/ then run this.
-
 left_img_dir = 'images/left/';
 right_img_dir = 'images/right/';
 
@@ -13,8 +12,8 @@ imageFileNames2 = fullfile(right_img_dir, {image_right_info.name});
 [imagePoints, boardSize, imagesUsed] = detectCheckerboardPoints(imageFileNames1, imageFileNames2);
 
 % Generate world coordinates of the checkerboard keypoints
-squareSize = 2.215000e+01;  % in units of 'millimeters'
-worldPoints = generateCheckerboardPoints(boardSize, squareSize);
+SQUARE_DIMENSION = 22.15;  % in units of 'millimeters'
+worldPoints = generateCheckerboardPoints(boardSize, SQUARE_DIMENSION);
 
 % Read one of the images from the first stereo pair
 I1 = imread(imageFileNames1{1});

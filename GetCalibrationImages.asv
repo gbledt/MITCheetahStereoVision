@@ -1,0 +1,57 @@
+% Gets a set of image pairs and saves them to folders for the 
+% calibration app to use.
+GRID_DIMENSION = 22.5;
+GRID_UNITS = 'millimeters';
+
+vid_left = videoinput('winvideo', 2);
+vid_right = videoinput('winvideo', 3);
+
+NUM_IMAGES = 20;
+image_index = 1;
+
+figure('Name', 'My Custom Preview Window'); 
+% uicontrol('String', 'Close', 'Callback', 'close(gcf)');s
+btn = uicontrol('Style', 'pushbutton', 'String', 'Capture',...
+        'Position', [20 20 50 20],...
+        'Callback', @capture);
+
+vidRes = vid_left.VideoResolution; 
+nBands = vid_left.NumberOfBands; 
+hImage = image( zeros(vidRes(2), vidRes(1), nBands) ); 
+preview(vid_left, hImage); 
+
+function capture(source, event)
+    disp('Taking snapshot!');
+    global vid_left
+    img_left = getsnapshot(vid_left);
+    img_right = getsnapshot(vid_right);
+    disp(i);
+    figure, imshowpair(img_left, img_right, 'montage'), title('Image pair');
+
+    % Save images to disk.
+    left_file = sprintf('images/left/image_%d.jpg', image_index);
+    right_file = sprintf('images/right/image_%d.jpg', image_index);
+
+    imwrite(img_left, left_file);
+    imwrite(img_right, right_file);
+    image_index = image_index + 1;
+end
+% 
+% for i = 1:NUM_IMAGES
+%         pause(5);
+%         disp('Taking snapshot!');
+%         img_left = getsnapshot(vid_left);
+%         img_right = getsnapshot(vid_right);
+%         disp(i);
+%         figure, imshowpair(img_left, img_right, 'montage'), title('Image pair');
+%         
+%         % Save images to disk.
+%         left_file = sprintf('images/left/image_%d.jpg', i);
+%         right_file = sprintf('images/right/image_%d.jpg', i);
+% 
+%         imwrite(img_left, left_file);
+%         imwrite(img_right, right_file);
+% end
+% 
+% % Run the command below to do the calibation.
+% stereoCameraCalibrator('images/left','images/right',GRID_DIMENSION, GRID_UNITS);
