@@ -1,15 +1,15 @@
 # Fdb version 3
-["bibtex egpaper_final"] 1512428902 "egpaper_final.aux" "egpaper_final.bbl" "egpaper_final" 1512428903
+["bibtex egpaper_final"] 1512428902 "egpaper_final.aux" "egpaper_final.bbl" "egpaper_final" 1512429112
   "./ieee.bst" 1411459028 19623 f9cd22458ca68af2567100f1aed905e8 ""
   "egbib.bib" 1512428649 11164 8673df8797cda6b383881f36a31d0f5e ""
-  "egpaper_final.aux" 1512428902 851 5b04be2df6952163143913e1cbdc87b0 ""
+  "egpaper_final.aux" 1512429112 851 5b04be2df6952163143913e1cbdc87b0 ""
   "egpaper_final.bcf" 0 -1 0 ""
   (generated)
-  "egpaper_final.blg"
   "egpaper_final.bbl"
-["pdflatex"] 1512428902 "egpaper_final.tex" "/home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/egpaper_final.pdf" "egpaper_final" 1512428903
+  "egpaper_final.blg"
+["pdflatex"] 1512429112 "egpaper_final.tex" "/home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/egpaper_final.pdf" "egpaper_final" 1512429112
   "/etc/texmf/web2c/texmf.cnf" 1485898172 1101 af7716885e081ab43982cab7b4672c1a ""
-  "/home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/egpaper_final.aux" 1512428902 851 5b04be2df6952163143913e1cbdc87b0 ""
+  "/home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/egpaper_final.aux" 1512429112 851 5b04be2df6952163143913e1cbdc87b0 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm" 1136768653 960 379cc0019370a9e0208a0a3f949f847a ""
@@ -96,16 +96,16 @@
   "Sections/Introduction.tex" 1512428883 110 4dd7bb6717ff7b3aa4d8e85ab8311294 ""
   "cvpr.sty" 1473006676 8185 dd8231e8a92c383d16b745afe2ab996b ""
   "cvpr_eso.sty" 1411459028 3878 6aa7c08ff2621006e0603349e40a30a8 ""
-  "egpaper_final.aux" 1512428902 851 5b04be2df6952163143913e1cbdc87b0 ""
+  "egpaper_final.aux" 1512429112 851 5b04be2df6952163143913e1cbdc87b0 ""
   "egpaper_final.bbl" 1512428902 357 78b78c4425b0eb6e21ec105dff454bba "bibtex egpaper_final"
-  "egpaper_final.tex" 1512428901 1735 98f288a2efac8a62496ac95e2ab06236 ""
+  "egpaper_final.tex" 1512429110 1755 37a0f11499c03bd0ec10c03ad138c56e ""
   "eso-pic.sty" 1411459028 9460 d2935ae95b5cd343fcf5887ff530288d ""
   (generated)
-  "Sections/Introduction.aux"
-  "egpaper_final.pdf"
-  "/home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/egpaper_final.log"
   "/home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/miniplaces/cvpr2017AuthorKit/latex/egpaper_final.log"
-  "/home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/egpaper_final.pdf"
-  "egpaper_final.aux"
-  "egpaper_final.log"
   "/home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/miniplaces/cvpr2017AuthorKit/latex/egpaper_final.pdf"
+  "egpaper_final.log"
+  "Sections/Introduction.aux"
+  "/home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/egpaper_final.pdf"
+  "egpaper_final.pdf"
+  "egpaper_final.aux"
+  "/home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/egpaper_final.log"
