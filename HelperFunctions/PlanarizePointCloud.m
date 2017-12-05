@@ -1,4 +1,16 @@
-function [fullCloud, horizPlanes, vertPlanes] = PlanarizePointCloud(ptCloud, bestPoly, WIDTH, HEIGHT)
+function [fullCloud, horizPlanes, vertPlanes, allPlanes] = PlanarizePointCloud(ptCloud, bestPoly, WIDTH, HEIGHT)
+    % INPUT:
+    % ptCloud: a pointCloud object
+    % bestPoly: a list of polygon regions in image to fit planes to
+    % WIDTH: width of the depthmap
+    % HEIGHT: height of the depthmap
+    
+    % OUTPUT
+    % fullCloud: a point cloud where planar regions have been fit
+    % horizPlanes: planes that are close to horizontal
+    % vertPlanes: planes that are close to vertical
+    % allPlanes: all planes from supplied regions
+    
     %% ======== Params =======%%
     orientationThresh = 1.5;
     
@@ -15,6 +27,9 @@ function [fullCloud, horizPlanes, vertPlanes] = PlanarizePointCloud(ptCloud, bes
 
     % Detect and store all horizontal planes.
     vertPlanes = [];
+    
+    % Store all planes here
+    allPlanes = [];
 
     M = zeros(2, numel(bestPoly));
     for ii = 1:numel(bestPoly)
@@ -40,6 +55,8 @@ function [fullCloud, horizPlanes, vertPlanes] = PlanarizePointCloud(ptCloud, bes
         if (vertScore / horizScore) > orientationThresh
             vertPlanes = [vertPlanes; plane_model.Parameters];
         end
+        
+        allPlanes = [allPlanes; plane_model.Parameters];
     end
 
 end
