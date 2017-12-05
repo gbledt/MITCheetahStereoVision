@@ -19,81 +19,64 @@ groundPlane = planeModel([0 -1 0, 0]);
 vertNorm = [0 0 -1]; % Unit vector to compare vertical planes against.
 horizNorm = [0 1 0]; % Unit vector to compare horiz planes against.
 
-% unrotatedCloud = pctransform(fullCloud, tform_x);
-% unrotatedCloud = pctransform(unrotatedCloud, tform_z);
+% ptCloud = pctransform(ptCloud, tform_x);
+% ptCloud = pctransform(ptCloud, tform_z);
+NUM_CONTOURS = 7;
+NUM_CONTOUR_LVL = 2;
+
+OBS_PADDING = 0.4; % meters in front and behind the obstacle that we care about.
+ROI_SAMPLES = 500; % How many points to use for active plane estimation?
+ROI_X = 0.3;
+ROI_Y = 2;
 %% ========================================= %%
 
-%% ================= Contours =============== %% 
-bestPoly = LargestContours(frameLeftGray, 2, 7);
-% plot(bestPoly(1).X, bestPoly(1).Y);
-% hold on;
-% for ii = 2:9
-%     plot(bestPoly(ii).X, bestPoly(ii).Y);
-% end
+%% ================= Contours =============== %%
+bestPoly = LargestContours(frameLeftGray, NUM_CONTOUR_LVL, NUM_CONTOURS);
 
-[HEIGHT, WIDTH] = size(disparityMap);
-fullCloud = pointCloud([0,0,0]);
-
-% Detect and store all horizontal planes.
-horizPlanes = [];
-
-% Detect and store all horizontal planes.
-vertPlanes = [];
-
-M = zeros(2, numel(bestPoly));
-for ii = 1:numel(bestPoly)
-    % Fit a plane to each segmented region of the scene.
-    poly = bestPoly(ii);
-    poly.X = [poly.X, poly.X(1)];
-    poly.Y = [poly.Y, poly.Y(1)];
-    bw = poly2mask(poly.X, poly.Y, HEIGHT, WIDTH);
-    [smoothSurface, plane_model] = SmoothMaskedSurface(bw, ptCloud);
-    fullCloud = pcmerge(fullCloud, smoothSurface, 0.001);
-    
-    % Score planes based on their dot product against references unit
-    % vectors.
-    horizScore = abs(dot(plane_model.Normal, horizNorm));
-    vertScore = abs(dot(plane_model.Normal, vertNorm));
-    thresh = 1.5;
-    
-    % Check if this is a horizontal plane.
-    if (horizScore / vertScore) > thresh
-        horizPlanes = [horizPlanes; plane_model.Parameters];
-    end
-    
-    % Also check if a vertical plane.
-    if (vertScore / horizScore) > thresh
-        vertPlanes = [vertPlanes; plane_model.Parameters];
-    end
+% Plot the largest, non-overlapping contours from image.
+plot(bestPoly(1).X, bestPoly(1).Y);
+hold on;
+for ii = 2:NUM_CONTOURS
+    plot(bestPoly(ii).X, bestPoly(ii).Y);
 end
 
+[HEIGHT, WIDTH] = size(disparityMap);
+[fullCloud, horizPlanes, vertPlanes, allPlanes] = PlanarizePointCloud(ptCloud, bestPoly, WIDTH, HEIGHT);
+
 %%  Find intersection of vertical planes with the ground. %%
-heightTransPts = [];
+heightTransPts = []; % Stores points where the height of the ground is likely to change.
 [vpRow, vpCol] = size(vertPlanes);
 for ii = 1:vpRow
-    vp = vertPlanes(ii, :);
+    vp = vertPlanes(ii, :); % Extract parameters from this vertical plane.
     N1 = vp(1:3);
     A1 = [0 0 -vp(4) / vp(3)];
     
-    N2 = groundPlane.Normal;
+    N2 = groundPlane.Normal; % Get the parameters from ground plane.
     A2 = [0 0 0];
-    
+    % Find line where the vertical plane hits ground.
     [linePoint, lineVector, check]= PlaneIntersect(N1, A1, N2, A2);
+    
+    % Get the point where this line intersects ground (coplanar in this
+    % case).
     intPoint = LinePlaneIntersect(lineVector, linePoint, groundPlane.Parameters);
+    
+    % The z-coord is the distance of that vertical plane from camera.
     heightTransPts = [heightTransPts, intPoint(3)];
 end
 
 %% Find the active horizontal plane between transition pts %%
-heightTransPts = [0, heightTransPts, 5]; % Add foreground and background pt
+ % Add foreground and background pt
+heightTransPts = [heightTransPts(1)-OBS_PADDING, heightTransPts, heightTransPts(numel(heightTransPts))+OBS_PADDING];
 activeHorizPlanes = zeros(numel(heightTransPts)-1, 4);
 [hpRow, hpCol] = size(horizPlanes);
 
 % For each z-region (between transition points)
 % Find the plane that best fits points in that region.
+% This is the 'active' plane in that region.
 for zz = 1:(numel(heightTransPts)-1)
-    roi = [-0.3 0.3; -2 2; heightTransPts(zz) heightTransPts(zz+1)];
+    roi = [-ROI_X ROI_X; -ROI_Y ROI_Y; heightTransPts(zz) heightTransPts(zz+1)];
     pointsInROI = findPointsInROI(fullCloud, roi);
-    sample = datasample(pointsInROI, 1000);
+    sample = datasample(pointsInROI, ROI_SAMPLES);
     samplePts = select(fullCloud, sample);
     
     bestScore = inf;
@@ -108,6 +91,7 @@ for zz = 1:(numel(heightTransPts)-1)
     activeHorizPlanes(zz,:) = horizPlanes(bestPlane,:);
 end
 
+% Get a side view of the active heights.
 activeHeights = zeros(numel(heightTransPts)-1);
 Z = [];
 Y = [];
@@ -123,17 +107,14 @@ for ahp = 1:(numel(heightTransPts)-1)
     [linePt, lineVect, check] = PlaneIntersect(N1, A1, N2, A2);
     Tmin = (min_z - linePt(3)) / lineVect(3);
     Tmax = (max_z - linePt(3)) / lineVect(3);
-    minPt = linePt + Tmin * lineVect
-    maxPt = linePt + Tmax * lineVect
+    minPt = linePt + Tmin * lineVect;
+    maxPt = linePt + Tmax * lineVect;
     Z = [Z, minPt(3), maxPt(3)];
     Y = [Y, minPt(2), maxPt(2)];
 end
 
+% Plot side view.
 figure, plot(Z, -1 * Y);
 
 player3D = pcplayer([-3, 3], [-3, 3], [0, 8], 'VerticalAxis', 'y','VerticalAxisDir', 'down');
 view(player3D, fullCloud);
-
-% Project full cloud on to side plane.
-% [projectedPts, newCloud] = ProjectToPlane(fullCloud, middleSlicePlane);
-% view(player3D, newCloud);

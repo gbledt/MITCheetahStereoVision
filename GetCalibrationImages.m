@@ -6,11 +6,11 @@ GRID_UNITS = 'millimeters';
 global vid_left;
 global vid_right;
 global image_index;
-vid_left = webcam(1);
-vid_right = webcam(2);
+vid_left = webcam(2);
+vid_right = webcam(1);
 
 NUM_IMAGES = 20;
-image_index = 1;
+image_index = 7;
 
 figure('Name', 'Image capture'); 
 btn = uicontrol('Style', 'pushbutton', 'String', 'Capture',...
@@ -29,8 +29,8 @@ function capture(source, event)
     figure, imshowpair(img_left, img_right, 'montage'), title('Image pair');
 
     % Save images to disk.
-    left_file = sprintf('images/left/image_%d.jpg', image_index);
-    right_file = sprintf('images/right/image_%d.jpg', image_index);
+    left_file = sprintf('Data/left/image_%d.jpg', image_index);
+    right_file = sprintf('Data/right/image_%d.jpg', image_index);
 
     imwrite(img_left, left_file);
     imwrite(img_right, right_file);
