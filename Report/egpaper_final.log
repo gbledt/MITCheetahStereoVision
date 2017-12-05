@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.25)  4 DEC 2017 18:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.25)  4 DEC 2017 18:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -405,7 +405,7 @@ fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 /times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.
 pfb>
 Output written on "/home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheeta
-hStereoVision/Report/egpaper_final.pdf" (1 page, 49714 bytes).
+hStereoVision/Report/egpaper_final.pdf" (1 page, 49847 bytes).
 PDF statistics:
  34 PDF objects out of 1000 (max. 8388607)
  26 compressed objects within 1 object stream
