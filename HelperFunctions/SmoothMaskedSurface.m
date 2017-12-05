@@ -1,4 +1,4 @@
-function [smoothSurface] = SmoothPointCloudRegion(mask, ptCloud)
+function [smoothSurface, plane_model] = SmoothPointCloudRegion(mask, ptCloud)
     % Get the indices of points inside mask.
     indices = find(mask);
     ptCloudSeg = select(ptCloud, indices);
