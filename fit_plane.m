@@ -24,7 +24,7 @@ horizNorm = [0 1 0]; % Unit vector to compare horiz planes against.
 %% ========================================= %%
 
 %% ================= Contours =============== %% 
-bestPoly = LargestContours(frameLeftGray, 2, 9);
+bestPoly = LargestContours(frameLeftGray, 2, 7);
 % plot(bestPoly(1).X, bestPoly(1).Y);
 % hold on;
 % for ii = 2:9
@@ -91,9 +91,9 @@ activeHorizPlanes = zeros(numel(heightTransPts)-1, 4);
 % For each z-region (between transition points)
 % Find the plane that best fits points in that region.
 for zz = 1:(numel(heightTransPts)-1)
-    roi = [-0.5 0.5; -2 2; heightTransPts(zz) heightTransPts(zz+1)];
+    roi = [-0.3 0.3; -2 2; heightTransPts(zz) heightTransPts(zz+1)];
     pointsInROI = findPointsInROI(fullCloud, roi);
-    sample = datasample(pointsInROI, 100);
+    sample = datasample(pointsInROI, 1000);
     samplePts = select(fullCloud, sample);
     
     bestScore = inf;
@@ -126,7 +126,7 @@ for ahp = 1:(numel(heightTransPts)-1)
     minPt = linePt + Tmin * lineVect
     maxPt = linePt + Tmax * lineVect
     Z = [Z, minPt(3), maxPt(3)];
-    Y = [Y, minPt(2), minPt(2)];
+    Y = [Y, minPt(2), maxPt(2)];
 end
 
 figure, plot(Z, -1 * Y);
