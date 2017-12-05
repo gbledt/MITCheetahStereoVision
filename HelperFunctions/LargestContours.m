@@ -46,11 +46,9 @@ function [polygons] = LargestContours(frame, cntLevels, K)
             % If large IOU, these are redundant contours.
             if (intersect_area / union_area) > 0.2
                 ii = ii + 1;
-                disp('Breaking out');
                 break   
             end
         end
-        disp('No strong intersections, adding cand');
         indices(fill_idx) = ix(ii);
         fill_idx = fill_idx + 1;
         ii = ii + 1;
