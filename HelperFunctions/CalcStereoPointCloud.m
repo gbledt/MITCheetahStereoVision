@@ -10,6 +10,6 @@ point_cloud = pointCloud(point_data.points3D, ...
     'Color', frame_data.frameLeftRect);
 
 [point_cloud, ~] = removeInvalidPoints(point_cloud);
-% point_data.point_cloud = pcdenoise(point_data.point_cloud);
+point_data.point_cloud = pcdenoise(point_cloud);
 
 point_data.point_cloud = point_cloud;

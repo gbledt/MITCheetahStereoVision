@@ -12,10 +12,10 @@ clear; close all; clc
 
 % Options
 options.RUN_VISION = true;
-options.LIVE_STREAM = true;
+options.LIVE_STREAM = false;
 options.PEOPLE_DETECTOR = false;
 options.DATA_FILE = true&~options.LIVE_STREAM;
-options.DATA_OPT = 0;
+options.DATA_OPT = 1;
 options.RECEIVE_LCM = false;
 options.BROADCAST_LCM = false;
 options.LOOP_RATE = 1;  % Hz
@@ -32,8 +32,8 @@ point_cloud_viewer = pcplayer([-3, 3], [-3, 3], [0, 8], ...
 % Setup the live stream for the webcams
 if options.LIVE_STREAM
     % Create the right and left webcam objects
-   left_cam = webcam(2);
-   right_cam = webcam(1);
+    left_cam = webcam(2);
+    right_cam = webcam(1);
     
     % Load the calibration data
     data_string = 'stereoParams';
@@ -46,21 +46,26 @@ if options.DATA_FILE
     % Case structure to select the data to be used
     switch options.DATA_OPT
         case 0
-            data_string = 'handshake';
+            data_string = 'handshakeStereo';
+            
+            % Get the data from the left and right video
+            videoFileLeft = [data_string,'_left.avi'];
+            videoFileRight = [data_string,'_right.avi'];
+            
+            % Set up video readers
+            readerLeft = vision.VideoFileReader(videoFileLeft, ...
+                'VideoOutputDataType', 'uint8');
+            readerRight = vision.VideoFileReader(videoFileRight, ...
+                'VideoOutputDataType', 'uint8');
+            
+        case 1
+            data_string = 'stereo';
+            
     end
     
     % Load the stereoParameters object.
-    load([data_string,'StereoParams.mat']);
+    load([data_string,'Params.mat']);
     
-    % Get the data from the left and right video
-    videoFileLeft = [data_string,'_left.avi'];
-    videoFileRight = [data_string,'_right.avi'];
-    
-    % Set up video readers
-    readerLeft = vision.VideoFileReader(videoFileLeft, ...
-        'VideoOutputDataType', 'uint8');
-    readerRight = vision.VideoFileReader(videoFileRight, ...
-        'VideoOutputDataType', 'uint8');
 end
 
 % Set up the people detector object
@@ -75,8 +80,9 @@ t0 = toc(loop_timer);
 %% ========================== Run the Loop ================================
 
 % Run the loop until the data is done or live stream is ended
-while (options.RUN_VISION && options.LIVE_STREAM) ||...
-        (options.DATA_FILE && (~isDone(readerLeft) && ~isDone(readerRight)))
+while options.RUN_VISION && (options.LIVE_STREAM ||...
+        (options.DATA_FILE && ...
+        (~options.DATA_OPT == 0 || (~isDone(readerLeft) && ~isDone(readerRight)))))
     
     % Receive LCM options from main GUI
     if options.RECEIVE_LCM
@@ -93,8 +99,14 @@ while (options.RUN_VISION && options.LIVE_STREAM) ||...
     
     % Read the frames from the data file
     if options.DATA_FILE
-        frame_data.frameLeft = readerLeft.step();
-        frame_data.frameRight = readerRight.step();
+        switch options.DATA_OPT
+            case 0
+                frame_data.frameLeft = readerLeft.step();
+                frame_data.frameRight = readerRight.step();
+            case 1
+                frame_data.frameLeft = imread('Data/left/image_1.jpg');
+                frame_data.frameRight = imread('Data/right/image_1.jpg');
+        end
     end
     
     % Process the relevant frame data
@@ -110,7 +122,7 @@ while (options.RUN_VISION && options.LIVE_STREAM) ||...
     point_data = ProcessRobotData(point_data);
     
     % Gets object data from the point cloud
-%     object_data = GetObjectData(point_data);
+    %     object_data = GetObjectData(point_data);
     
     % Show the distance to the nearest person if there is one
     if options.PEOPLE_DETECTOR
@@ -128,7 +140,10 @@ while (options.RUN_VISION && options.LIVE_STREAM) ||...
     
     while ((toc(loop_timer) - t0) < 1/options.LOOP_RATE),end;
     
-     t0 = toc(loop_timer)
+    t0 = toc(loop_timer);
+    if options.DATA_FILE && options.DATA_OPT == 1
+        options.RUN_VISION = false;
+    end
 end
 
 %% ========================= Clean Up and Exit ============================
@@ -139,8 +154,10 @@ if options.LIVE_STREAM
 end
 
 if options.DATA_FILE
-    reset(readerLeft);
-    reset(readerRight);
+    if (options.DATA_OPT == 0)
+        reset(readerLeft);
+        reset(readerRight);
+    end
 end
 
 release(player);

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.25)  4 DEC 2017 18:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.25)  4 DEC 2017 18:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -381,7 +381,6 @@ Package atveryend Info: Empty hook `BeforeClearDocument' on input line 66.
  [4321{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
-
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 66.
 
@@ -394,18 +393,18 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 66.
 Here is how much of TeX's memory you used:
  6258 strings out of 493029
  91376 string characters out of 6136234
- 174536 words of memory out of 5000000
+ 178536 words of memory out of 5000000
  9697 multiletter control sequences out of 15000+600000
  22096 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,9n,26p,261b,324s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,9n,26p,1150b,322s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 /times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.
 pfb>
 Output written on "/home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheeta
-hStereoVision/Report/egpaper_final.pdf" (1 page, 49847 bytes).
+hStereoVision/Report/egpaper_final.pdf" (1 page, 53262 bytes).
 PDF statistics:
  34 PDF objects out of 1000 (max. 8388607)
  26 compressed objects within 1 object stream
