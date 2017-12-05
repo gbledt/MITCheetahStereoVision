@@ -17,11 +17,11 @@ function [xyz_point, status] = LinePlaneIntersect(line_direction, line_pt, plane
     if denom == 0
         % Case 1: num is also zero, line is on the plane.
         if num == 0
-            disp("Line is on the plane");
+%             disp("Line is on the plane");
             status = 1;
             xyz_point = line_pt;
         else
-            disp("Line is parallel to plane, no intersection");
+%             disp("Line is parallel to plane, no intersection");
             status = 2;
             xyz_point = [inf, inf, inf];
         end
