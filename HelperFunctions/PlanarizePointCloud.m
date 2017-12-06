@@ -43,13 +43,13 @@ function [fullCloud, horizPlanes, vertPlanes, allPlanes] = PlanarizePointCloud(p
     [b, ix] = sort(centroids(:,2), 'descend');
 %     bestPoly = bestPoly(ix,:)
 
-    M = zeros(2, numPoly);
     for ii = 1:numPoly
         % Fit a plane to each segmented region of the scene.
         poly = bestPoly(ix(ii));
         poly.X = [poly.X, poly.X(1)];
         poly.Y = [poly.Y, poly.Y(1)];
         bw = poly2mask(poly.X, poly.Y, HEIGHT, WIDTH);
+%         figure, imshow(bw)
         [smoothSurface, plane_model] = SmoothMaskedSurface(bw, ptCloud);
         fullCloud = pcmerge(fullCloud, smoothSurface, 0.001);
 

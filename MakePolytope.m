@@ -7,14 +7,14 @@ rightPlane = planeModel([-1 0 0 0.4]);
 rightNorm = rightPlane.Normal;
 rightPt = GetPointOnPlane(rightPlane.Parameters);
 
-bottomPlane = planeModel([0 -1 0 0.4]);
-backPlane = planeModel([0 0 -1 3]);
+bottomPlane = planeModel([0 -1 0 0.1]);
+backPlane = planeModel([0 0 -1 1.5]);
 frontPlane = planeModel([0 0 1 -1]);
 
 planeList = allPlanes;
 
 % Get boundaries for each plane.
-planeList = [frontPlane.Parameters; planeList; backPlane.Parameters];
+planeList = [bottomPlane.Parameters; planeList; backPlane.Parameters];
 [apRow, apCol] = size(planeList);
 
 % For each plane, make a polygon using the plane before and after it.
@@ -48,12 +48,13 @@ end
 
 rotate3d on;
 [numPoly, pts, doub] = size(poly3d);
+colors = ['y', 'm', 'c', 'r', 'g', 'b'];
 for ii = 1:numPoly
     poly = poly3d(ii,:,:);
     X = poly(:,:,1);
-    Y = - 1 * poly(:,:,2);
-    Z = poly(:,:,3)
-    fill3(X,Y,Z, [0 0 1]);
+    Y = poly(:,:,2);
+    Z = poly(:,:,3);
+    fill3(X,Y,Z, colors(mod(ii, 6)+1));
     xlabel('x')
     ylabel('y')
     zlabel('z')

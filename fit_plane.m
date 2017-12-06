@@ -1,5 +1,5 @@
 % Extracts the best contours from image and smooths.
-
+close all;
 %% ============= Parameters ============= %%
 THETA_X_DEG = 12;
 THETA_X_RAD = degtorad(THETA_X_DEG);
@@ -21,7 +21,7 @@ horizNorm = [0 1 0]; % Unit vector to compare horiz planes against.
 
 % ptCloud = pctransform(ptCloud, tform_x);
 % ptCloud = pctransform(ptCloud, tform_z);
-NUM_CONTOURS = 7;
+NUM_CONTOURS = 6;
 NUM_CONTOUR_LVL = 2;
 
 OBS_PADDING = 0.4; % meters in front and behind the obstacle that we care about.
@@ -34,11 +34,12 @@ ROI_Y = 2;
 bestPoly = LargestContours(frameLeftGray, NUM_CONTOUR_LVL, NUM_CONTOURS);
 
 % Plot the largest, non-overlapping contours from image.
-plot(bestPoly(1).X, bestPoly(1).Y);
+figure, plot(bestPoly(1).X, bestPoly(1).Y);
 hold on;
 for ii = 2:NUM_CONTOURS
     plot(bestPoly(ii).X, bestPoly(ii).Y);
 end
+axis ij;
 
 [HEIGHT, WIDTH] = size(disparityMap);
 [fullCloud, horizPlanes, vertPlanes, allPlanes] = PlanarizePointCloud(ptCloud, bestPoly, WIDTH, HEIGHT);

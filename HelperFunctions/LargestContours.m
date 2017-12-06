@@ -1,6 +1,8 @@
 function [polygons] = LargestContours(frame, cntLevels, K)
     % Get contours from the image.
+    set(groot,'defaultFigureVisible','off')
     [C, h] = imcontour(frame, cntLevels);
+    set(groot,'defaultFigureVisible','on')
     cMatrix = h.ContourMatrix;
     shapeData = contour2shape(cMatrix);
     
