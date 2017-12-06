@@ -1,4 +1,4 @@
-function [fullCloud, horizPlanes, vertPlanes, allPlanes] = PlanarizePointCloud(ptCloud, bestPoly, WIDTH, HEIGHT)
+function [fullCloud, horizPlanes, vertPlanes, allPlanes] = PlanarizePointCloud(ptCloud, bestPoly, WIDTH, HEIGHT, rtnCloud)
     % INPUT:
     % ptCloud: a pointCloud object
     % bestPoly: a list of polygon regions in image to fit planes to
@@ -50,8 +50,11 @@ function [fullCloud, horizPlanes, vertPlanes, allPlanes] = PlanarizePointCloud(p
         poly.Y = [poly.Y, poly.Y(1)];
         bw = poly2mask(poly.X, poly.Y, HEIGHT, WIDTH);
 %         figure, imshow(bw)
-        [smoothSurface, plane_model] = SmoothMaskedSurface(bw, ptCloud);
-        fullCloud = pcmerge(fullCloud, smoothSurface, 0.001);
+        [smoothSurface, plane_model] = SmoothMaskedSurface(bw, ptCloud, rtnCloud);
+        
+        if rtnCloud == true
+            fullCloud = pcmerge(fullCloud, smoothSurface, 0.001);
+        end
 
         % Score planes based on their dot product against references unit
         % vectors.

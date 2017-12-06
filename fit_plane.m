@@ -42,7 +42,7 @@ end
 axis ij;
 
 [HEIGHT, WIDTH] = size(disparityMap);
-[fullCloud, horizPlanes, vertPlanes, allPlanes] = PlanarizePointCloud(ptCloud, bestPoly, WIDTH, HEIGHT);
+[fullCloud, horizPlanes, vertPlanes, allPlanes] = PlanarizePointCloud(ptCloud, bestPoly, WIDTH, HEIGHT, true);
 
 %%  Find intersection of vertical planes with the ground. %%
 heightTransPts = []; % Stores points where the height of the ground is likely to change.
