@@ -14,7 +14,7 @@ player3D = pcplayer([-3, 3], [-3, 3], [0, 8], 'VerticalAxis', 'y', 'VerticalAxis
 midSlicePlane = planeModel([1, 0, 0, 0]);
 leftSlicePlane = planeModel([1, 0, 0, 0.6]);
 rightSlicePlane = planeModel([1, 0, 0, -0.6]);
-groundPlane = planeModel([0 -1 0, 0]);
+groundPlane = planeModel([0 -1 0 0.4]);
 
 vertNorm = [0 0 -1]; % Unit vector to compare vertical planes against.
 horizNorm = [0 1 0]; % Unit vector to compare horiz planes against.
@@ -26,7 +26,7 @@ NUM_CONTOUR_LVL = 2;
 
 OBS_PADDING = 0.4; % meters in front and behind the obstacle that we care about.
 ROI_SAMPLES = 500; % How many points to use for active plane estimation?
-ROI_X = 0.3;
+ROI_X = 1;
 ROI_Y = 2;
 %% ========================================= %%
 
@@ -49,10 +49,11 @@ heightTransPts = []; % Stores points where the height of the ground is likely to
 for ii = 1:vpRow
     vp = vertPlanes(ii, :); % Extract parameters from this vertical plane.
     N1 = vp(1:3);
-    A1 = [0 0 -vp(4) / vp(3)];
+    A1 = GetPointOnPlane(vp);
     
     N2 = groundPlane.Normal; % Get the parameters from ground plane.
-    A2 = [0 0 0];
+    A2 = GetPointOnPlane(groundPlane.Parameters);
+
     % Find line where the vertical plane hits ground.
     [linePoint, lineVector, check]= PlaneIntersect(N1, A1, N2, A2);
     
@@ -66,6 +67,9 @@ end
 
 %% Find the active horizontal plane between transition pts %%
  % Add foreground and background pt
+[b, ix] = sort(heightTransPts);
+heightTransPts = heightTransPts(ix); % Make sure these are in order.
+
 heightTransPts = [heightTransPts(1)-OBS_PADDING, heightTransPts, heightTransPts(numel(heightTransPts))+OBS_PADDING];
 activeHorizPlanes = zeros(numel(heightTransPts)-1, 4);
 [hpRow, hpCol] = size(horizPlanes);
@@ -74,7 +78,7 @@ activeHorizPlanes = zeros(numel(heightTransPts)-1, 4);
 % Find the plane that best fits points in that region.
 % This is the 'active' plane in that region.
 for zz = 1:(numel(heightTransPts)-1)
-    roi = [-ROI_X ROI_X; -ROI_Y ROI_Y; heightTransPts(zz) heightTransPts(zz+1)];
+    roi = [-ROI_X ROI_X; -ROI_Y ROI_Y; heightTransPts(zz) heightTransPts(zz+1)]
     pointsInROI = findPointsInROI(fullCloud, roi);
     sample = datasample(pointsInROI, ROI_SAMPLES);
     samplePts = select(fullCloud, sample);
@@ -101,9 +105,11 @@ for ahp = 1:(numel(heightTransPts)-1)
     max_z = heightTransPts(ahp+1);
     
     N1 = midSlicePlane.Normal;
-    A1 = [0 0 0];
+    A1 = GetPointOnPlane(midSlicePlane.Parameters);
+    
     N2 = plane(1:3);
-    A2 = [0 0 -plane(4) / plane(3)];
+    A2 = GetPointOnPlane(plane);
+
     [linePt, lineVect, check] = PlaneIntersect(N1, A1, N2, A2);
     Tmin = (min_z - linePt(3)) / lineVect(3);
     Tmax = (max_z - linePt(3)) / lineVect(3);
