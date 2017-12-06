@@ -10,7 +10,7 @@ function [xyz_point, status] = LinePlaneIntersect(line_direction, line_pt, plane
     % stats: 0 = found point, 1 = line on plane, 2 = no intersection
     %% =============== %%
 
-    num = -1 * (dot(plane_params(1:3), line_pt) + plane_params(4))
+    num = -1 * (dot(plane_params(1:3), line_pt) + plane_params(4));
     denom = dot(plane_params(1:3), line_direction);
     
     % If denom is zero, then the line is parallel to the plane

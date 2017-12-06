@@ -15,7 +15,7 @@ function [polygons] = LargestContours(frame, cntLevels, K)
     end
     
     [b, ix] = sort(polyAreas(:), 'descend');
-
+    
     indices = zeros(1, K); % This will contain final indices of the best contours.
     fill_idx = 1; % Index in indices that we are currently trying to fill.
     ii = 1; % Index in shapeData that we are currently testing.

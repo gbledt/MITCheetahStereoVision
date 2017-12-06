@@ -30,11 +30,23 @@ function [fullCloud, horizPlanes, vertPlanes, allPlanes] = PlanarizePointCloud(p
     
     % Store all planes here
     allPlanes = [];
+    
+    % Sort polygons by increasing height in the original image (useful
+    % later)
+    numPoly = numel(bestPoly);
+    centroids = zeros(numPoly, 2);
+    for pp = 1:numPoly
+        poly = bestPoly(pp);
+        polyXY = [transpose(poly.X), transpose(poly.Y)];
+        centroids(pp,:) = Centroid2D(polyXY);
+    end
+    [b, ix] = sort(centroids(:,2), 'descend');
+%     bestPoly = bestPoly(ix,:)
 
-    M = zeros(2, numel(bestPoly));
-    for ii = 1:numel(bestPoly)
+    M = zeros(2, numPoly);
+    for ii = 1:numPoly
         % Fit a plane to each segmented region of the scene.
-        poly = bestPoly(ii);
+        poly = bestPoly(ix(ii));
         poly.X = [poly.X, poly.X(1)];
         poly.Y = [poly.Y, poly.Y(1)];
         bw = poly2mask(poly.X, poly.Y, HEIGHT, WIDTH);
