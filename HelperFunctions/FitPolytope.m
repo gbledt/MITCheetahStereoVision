@@ -1,4 +1,4 @@
-function [sliceMap, poly3d] = GetSliceMap(frameLeftGray, ptCloud, disparityMap)
+function [sliceMap, poly3d] = FitPolytope(frameLeftGray, ptCloud, disparityMap)
     %% ============= Parameters ============= %%
 %     THETA_X_DEG = 12;
 %     THETA_X_RAD = degtorad(THETA_X_DEG);
@@ -13,9 +13,10 @@ function [sliceMap, poly3d] = GetSliceMap(frameLeftGray, ptCloud, disparityMap)
     midPlane = planeModel([1, 0, 0, 0]);
     leftPlane = planeModel([1, 0, 0, 0.6]);
     rightPlane = planeModel([1, 0, 0, -0.6]);
+    
     groundPlane = planeModel([0 -1 0 0.4]);
     frontPlane = planeModel([0 0 1 -1.6]);
-    topPlane = planeModel([0 1 0 -0.1]);
+    topPlane = planeModel([0 1 0 0.4]);
 
     vertNorm = [0 0 -1]; % Unit vector to compare vertical planes against.
     horizNorm = [0 1 0]; % Unit vector to compare horiz planes against.
