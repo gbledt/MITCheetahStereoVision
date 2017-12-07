@@ -105,8 +105,8 @@ while options.RUN_VISION && (options.LIVE_STREAM ||...
                 frame_data.frameLeft = readerLeft.step();
                 frame_data.frameRight = readerRight.step();
             case 1
-                frame_data.frameLeft = imread('Data/left/image_8.jpg');
-                frame_data.frameRight = imread('Data/right/image_8.jpg');
+                frame_data.frameLeft = imread('Data/left/image_7.jpg');
+                frame_data.frameRight = imread('Data/right/image_7.jpg');
         end
     end
     
@@ -126,7 +126,7 @@ while options.RUN_VISION && (options.LIVE_STREAM ||...
     [sliceMap, poly3d] = FitPolytope(frame_data.frameLeftGray,...
                                      point_data.point_cloud,...
                                      point_data.disparityMap,...
-                                     6, 0, 0);
+                                     8, 0, 0);
     PlotPoly3D(poly3d);
     
     % sliceMap is an Nx2 matrix, where column 1 is distance and column 2 is

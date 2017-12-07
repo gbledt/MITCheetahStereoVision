@@ -22,6 +22,11 @@ mask(25:end-25,25:end-25) = 1;
 final_mask = activecontour(frame_data.frameLeftGray, mask, 200);
 point_data.disparityMap = point_data.disparityMap .* final_mask;
 
+figure, imshow(point_data.disparityMap, DISPARITY_RANGE);
+title('Disparity Map');
+colormap(gca,jet) 
+colorbar
+
 % Reconstruct 3-D scene
 points3D = reconstructScene(point_data.disparityMap, stereoParams);
 point_data.points3D = points3D ./ 1000;

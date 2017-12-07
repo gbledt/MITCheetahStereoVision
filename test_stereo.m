@@ -6,10 +6,17 @@ UNIQUENESS_THRESHOLD = 15;
 TEXTURE_THRESHOLD = 0.0004;
 MATCH_CONTRAST = false;
 
+close all;
+
 %% ================================%%
-load('stereoParams12-5.mat');
-img1 = 'Data/left/image_7.jpg';
-img2 = 'Data/right/image_7.jpg';
+% load('stereoParams12-5.mat');
+% img1 = 'Data/left/image_7.jpg';
+% img2 = 'Data/right/image_7.jpg';
+
+load('stereoParams.mat');
+img1 = 'Data/left/image_15.jpg';
+img2 = 'Data/right/image_15.jpg';
+
 img1 = imread(img1);
 img2 = imread(img2);
 
@@ -41,7 +48,7 @@ disparityMap = disparity(frameLeftGray, frameRightGray,...
 % Mask out the background
 mask = zeros(size(frameLeftGray));
 mask(25:end-25,25:end-25) = 1;
-final_mask = activecontour(frameLeftGray, mask, 100);
+final_mask = activecontour(frameLeftGray, mask, 200);
 disparityMap = disparityMap .* final_mask;
 
 figure, imshow(disparityMap, DISPARITY_RANGE);
@@ -58,3 +65,8 @@ ptCloud = pointCloud(points3D, 'Color', frameLeftRect);
 player3D = pcplayer([-3, 3], [-3, 3], [0, 8], 'VerticalAxis', 'y', ...
     'VerticalAxisDir', 'down');
 view(player3D, ptCloud);
+
+close all;
+
+[sm, poly3d] = FitPolytope(frameLeftGray, ptCloud, disparityMap, 8, 0, 0);
+PlotPoly3D(poly3d);
