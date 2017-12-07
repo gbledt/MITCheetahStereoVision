@@ -19,9 +19,9 @@ function [sliceMap, poly3d] = FitPolytope(frameLeftGray, ptCloud, disparityMap,.
     leftPlane = planeModel([1, 0, 0, 0.6]);
     rightPlane = planeModel([1, 0, 0, -0.6]);
     
-    groundPlane = planeModel([0 1 0 0.6]);
-    frontPlane = planeModel([0 0 1 -1.6]);
-    topPlane = planeModel([0 1 0 0.4]);
+    groundPlane = planeModel([0 1 0 -0.4]);
+    frontPlane = planeModel([0 0 1 -1.0]);
+    topPlane = planeModel([0 1 0 0.8]);
     backPlane = planeModel([0 0 1 -2.5]);
 
     vertNorm = [0 0 -1]; % Unit vector to compare vertical planes against.
@@ -50,24 +50,24 @@ function [sliceMap, poly3d] = FitPolytope(frameLeftGray, ptCloud, disparityMap,.
     [fullCloud, horizPlanes, vertPlanes, planeList] = PlanarizePointCloud(ptCloud, bestPoly, WIDTH, HEIGHT, false);
     
     % Remove consecutive vertical or horizontal planes from planeList.
-%     [row, col] = size(planeList);
-%     newPlaneList = planeList(1,:);
-%     xx = 2;
-%     while xx <= row
-%         p1 = newPlaneList(end,:);
-%         p2 = planeList(xx,:);
-%         
-%         angle = acos(dot(p1(1:3), p2(1:3)) / (norm(p1(1:3)) * norm(p2(1:3))));
-%         angle = abs(radtodeg(angle));
-%         if angle < 15 || angle > 165
-%             disp("skipping");
-%         else
-%             newPlaneList = [newPlaneList; p2];
-%         end
-%         xx = xx + 1;
-%     end
+    [row, col] = size(planeList);
+    newPlaneList = planeList(1,:);
+    xx = 2;
+    while xx <= row
+        p1 = newPlaneList(end,:);
+        p2 = planeList(xx,:);
+        
+        angle = acos(dot(p1(1:3), p2(1:3)) / (norm(p1(1:3)) * norm(p2(1:3))));
+        angle = abs(radtodeg(angle))
+        if angle < 20 || angle > 160 || p2(1) > 0.1
+            disp('skipping');
+        else
+            newPlaneList = [newPlaneList; p2];
+        end
+        xx = xx + 1;
+    end
     
-%     planeList = newPlaneList;
+    planeList = newPlaneList;
     
     % Logic to determine bounding planes.
     lastPlane = planeList(end,:);

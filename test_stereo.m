@@ -68,5 +68,7 @@ view(player3D, ptCloud);
 
 close all;
 
-[sm, poly3d] = FitPolytope(frameLeftGray, ptCloud, disparityMap, 8, 0, 0);
+[sliceMap, poly3d] = FitPolytope(frameLeftGray, ptCloud, disparityMap, 6, 10, -2);
 PlotPoly3D(poly3d);
+
+figure, plot(sliceMap(:,1), sliceMap(:,2));
