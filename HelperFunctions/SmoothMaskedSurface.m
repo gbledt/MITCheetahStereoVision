@@ -4,7 +4,7 @@ function [smoothSurface, plane_model] = SmoothPointCloudRegion(mask, ptCloud, rt
     ptCloudSeg = select(ptCloud, indices);
     
     % Fit a plane to the points inside mask.
-    [plane_model,inlierIndices,outlierIndices] = pcfitplane(ptCloudSeg, 0.01);
+    [plane_model,inlierIndices,outlierIndices] = pcfitplane(ptCloudSeg, 0.02);
     
     % Project all points on to the best plane.
     smoothSurface = pointCloud([0 0 0]);

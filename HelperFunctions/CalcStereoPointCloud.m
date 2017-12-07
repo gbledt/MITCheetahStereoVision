@@ -17,10 +17,10 @@ point_data.disparityMap = disparity(frame_data.frameLeftGray, frame_data.frameRi
     'UniquenessThreshold', UNIQUENESS_THRESHOLD);
 
 % Mask out the background
-mask = zeros(size(frame_data.frameLeftGray));
-mask(25:end-25,25:end-25) = 1;
-final_mask = activecontour(frame_data.frameLeftGray, mask, 100);
-point_data.disparityMap = point_data.disparityMap .* final_mask;
+% mask = zeros(size(frame_data.frameLeftGray));
+% mask(25:end-25,25:end-25) = 1;
+% final_mask = activecontour(frame_data.frameLeftGray, mask, 500);
+% point_data.disparityMap = point_data.disparityMap .* final_mask;
 
 % Reconstruct 3-D scene
 points3D = reconstructScene(point_data.disparityMap, stereoParams);

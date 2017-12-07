@@ -1,21 +1,24 @@
 function [sliceMap, poly3d] = FitPolytope(frameLeftGray, ptCloud, disparityMap, NUM_CONTOURS)
     %% ============= Parameters ============= %%
-    THETA_X_DEG = 0;
+    THETA_X_DEG = 10;
     THETA_X_RAD = degtorad(THETA_X_DEG);
     tform_x = affine3d(makehgtform('xrotate', THETA_X_RAD));
 
-    THETA_Z_DEG = 0;
+    THETA_Z_DEG = -2;
     THETA_Z_RAD = degtorad(THETA_Z_DEG);
     tform_z = affine3d(makehgtform('zrotate', THETA_Z_RAD));
+    
+    vertNorm = [0 0 -1]; % Unit vector to compare vertical planes against.
+    horizNorm = [0 1 0]; % Unit vector to compare horiz planes against.
 
     ptCloud = pctransform(ptCloud, tform_x);
-%     ptCloud = pctransform(ptCloud, tform_z);
+    ptCloud = pctransform(ptCloud, tform_z);
     
     midPlane = planeModel([1, 0, 0, 0]);
     leftPlane = planeModel([1, 0, 0, 0.6]);
     rightPlane = planeModel([1, 0, 0, -0.6]);
     
-    groundPlane = planeModel([0 -1 0 0.4]);
+    groundPlane = planeModel([0 1 0 0.6]);
     frontPlane = planeModel([0 0 1 -1.6]);
     topPlane = planeModel([0 1 0 0.4]);
     backPlane = planeModel([0 0 1 -2.5]);
@@ -31,7 +34,6 @@ function [sliceMap, poly3d] = FitPolytope(frameLeftGray, ptCloud, disparityMap, 
     ROI_X = 1;
     ROI_Y = 2;
     %% ========================================= %%
-    
     bestPoly = LargestContours(frameLeftGray, NUM_CONTOUR_LVL, NUM_CONTOURS);
     
     % Plot the largest, non-overlapping contours from image.
@@ -47,20 +49,46 @@ function [sliceMap, poly3d] = FitPolytope(frameLeftGray, ptCloud, disparityMap, 
     [fullCloud, horizPlanes, vertPlanes, planeList] = PlanarizePointCloud(ptCloud, bestPoly, WIDTH, HEIGHT, false);
     
     % Remove consecutive vertical or horizontal planes from planeList.
+    [row, col] = size(planeList);
+    newPlaneList = planeList(1,:);
+    xx = 2;
+    while xx <= row
+        p1 = newPlaneList(end,:);
+        p2 = planeList(xx,:);
+        
+        angle = acos(dot(p1(1:3), p2(1:3)) / (norm(p1(1:3)) * norm(p2(1:3))));
+        angle = abs(radtodeg(angle));
+        if angle < 30 || angle > 150
+            disp("skipping");
+        else
+            newPlaneList = [newPlaneList; p2];
+        end
+        xx = xx + 1;
+    end
+    
+    planeList = newPlaneList;
     
     % Logic to determine bounding planes.
-    lastPlane = planeList(end,:)
-    vertNorm = [0 0 -1]; % Unit vector to compare vertical planes against.
-    horizNorm = [0 1 0]; % Unit vector to compare horiz planes against.
+    lastPlane = planeList(end,:);
     
     horizScore = abs(dot(lastPlane(1:3), horizNorm));
     vertScore = abs(dot(lastPlane(1:3), vertNorm));
     
     % If last plane horizontal, cut off with vertical plane.
     if (horizScore / vertScore) > 1.5
-        planeList = [frontPlane.Parameters; planeList; backPlane.Parameters];
+        planeList = [planeList; backPlane.Parameters]
     else
-        planeList = [frontPlane.Parameters; planeList; topPlane.Parameters];
+        planeList = [planeList; topPlane.Parameters]
+    end
+    
+    firstPlane = planeList(1,:);
+    horizScore = abs(dot(firstPlane(1:3), horizNorm));
+    vertScore = abs(dot(firstPlane(1:3), vertNorm));
+    
+    if (horizScore / vertScore) > 1.5
+        planeList = [frontPlane.Parameters ; planeList];
+    else
+        planeList = [groundPlane.Parameters ; planeList];
     end
     
     % Get boundaries for each plane.

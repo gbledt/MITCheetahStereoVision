@@ -123,15 +123,6 @@ while options.RUN_VISION && (options.LIVE_STREAM ||...
     [sliceMap, poly3d] = FitPolytope(frame_data.frameLeftGray, point_data.point_cloud, point_data.disparityMap, 7);
     PlotPoly3D(poly3d);
     
-    % Plot the largest, non-overlapping contours from image.
-%     [NUM_CONTOURS, s2, s2] = size(poly3d);
-%     figure, plot(poly3d(1,:,1), poly3d(1,:,2));
-%     hold on;
-%     for ii = 2:NUM_CONTOURS
-%         plot(poly3d(ii,:,1), poly3d(ii,:,2));
-%     end
-%     axis ij;
-    
     % sliceMap is an Nx2 matrix, where column 1 is distance and column 2 is
     % height
     figure, plot(sliceMap(:,1), sliceMap(:,2));

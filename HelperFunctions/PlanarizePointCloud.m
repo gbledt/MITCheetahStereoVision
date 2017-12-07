@@ -11,7 +11,7 @@ function [fullCloud, horizPlanes, vertPlanes, allPlanes] = PlanarizePointCloud(p
     % vertPlanes: planes that are close to vertical
     % allPlanes: all planes from supplied regions
     
-    %% ======== Params =======%%
+    %% ======== Params ======= %%
     orientationThresh = 1.5;
     
     % Note: this assumes RDF frame convention.
