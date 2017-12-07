@@ -7,9 +7,9 @@ TEXTURE_THRESHOLD = 0.0004;
 MATCH_CONTRAST = false;
 
 %% ================================%%
-load('stereoParams.mat');
-img1 = 'Data/left/image_14.jpg';
-img2 = 'Data/right/image_14.jpg';
+load('stereoParams12-5.mat');
+img1 = 'Data/left/image_7.jpg';
+img2 = 'Data/right/image_7.jpg';
 img1 = imread(img1);
 img2 = imread(img2);
 

@@ -1,4 +1,4 @@
-function [polygons] = LargestContours(frame, cntLevels, K)
+function [polygons] = LargestContours(frame, cntLevels, K, IOU_THRESH)
     % Get contours from the image.
     set(groot,'defaultFigureVisible','off')
     [C, h] = imcontour(frame, cntLevels);
@@ -46,7 +46,7 @@ function [polygons] = LargestContours(frame, cntLevels, K)
             union_area = sum(union(:)==1);
             
             % If large IOU, these are redundant contours.
-            if (intersect_area / union_area) > 0.2
+            if (intersect_area / union_area) > IOU_THRESH
                 ii = ii + 1;
                 break   
             end

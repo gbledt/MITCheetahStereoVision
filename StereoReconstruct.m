@@ -34,7 +34,7 @@ if options.LIVE_STREAM
     right_cam = webcam(1);
     
     % Load the calibration data
-    data_string = 'stereoParams';
+    data_string = 'stereoParams12-5';
     load([data_string,'.mat']);
 end
 
@@ -57,6 +57,9 @@ if options.DATA_FILE
                 'VideoOutputDataType', 'uint8');
             
         case 1
+            % Load the calibration data
+            data_string = 'stereoParams12-5';
+            load([data_string,'.mat']);
             data_string = 'stereo';
             
     end
@@ -102,8 +105,8 @@ while options.RUN_VISION && (options.LIVE_STREAM ||...
                 frame_data.frameLeft = readerLeft.step();
                 frame_data.frameRight = readerRight.step();
             case 1
-                frame_data.frameLeft = imread('Data/left/image_14.jpg');
-                frame_data.frameRight = imread('Data/right/image_14.jpg');
+                frame_data.frameLeft = imread('Data/left/image_8.jpg');
+                frame_data.frameRight = imread('Data/right/image_8.jpg');
         end
     end
     
@@ -120,7 +123,10 @@ while options.RUN_VISION && (options.LIVE_STREAM ||...
     robot_point_data = ProcessRobotData(point_data);
     
     % Fit a polytope to the obstacle and get a planar slice of height info.
-    [sliceMap, poly3d] = FitPolytope(frame_data.frameLeftGray, point_data.point_cloud, point_data.disparityMap, 7);
+    [sliceMap, poly3d] = FitPolytope(frame_data.frameLeftGray,...
+                                     point_data.point_cloud,...
+                                     point_data.disparityMap,...
+                                     6, 0, 0);
     PlotPoly3D(poly3d);
     
     % sliceMap is an Nx2 matrix, where column 1 is distance and column 2 is

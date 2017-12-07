@@ -1,10 +1,11 @@
-function [sliceMap, poly3d] = FitPolytope(frameLeftGray, ptCloud, disparityMap, NUM_CONTOURS)
+function [sliceMap, poly3d] = FitPolytope(frameLeftGray, ptCloud, disparityMap,...
+    NUM_CONTOURS, THETA_X_DEG, THETA_Z_DEG)
     %% ============= Parameters ============= %%
-    THETA_X_DEG = 10;
+%     THETA_X_DEG = 10;
     THETA_X_RAD = degtorad(THETA_X_DEG);
     tform_x = affine3d(makehgtform('xrotate', THETA_X_RAD));
 
-    THETA_Z_DEG = -2;
+%     THETA_Z_DEG = -2;
     THETA_Z_RAD = degtorad(THETA_Z_DEG);
     tform_z = affine3d(makehgtform('zrotate', THETA_Z_RAD));
     
@@ -34,7 +35,7 @@ function [sliceMap, poly3d] = FitPolytope(frameLeftGray, ptCloud, disparityMap, 
     ROI_X = 1;
     ROI_Y = 2;
     %% ========================================= %%
-    bestPoly = LargestContours(frameLeftGray, NUM_CONTOUR_LVL, NUM_CONTOURS);
+    bestPoly = LargestContours(frameLeftGray, NUM_CONTOUR_LVL, NUM_CONTOURS, 0.2);
     
     % Plot the largest, non-overlapping contours from image.
     figure, plot(bestPoly(1).X, bestPoly(1).Y);
