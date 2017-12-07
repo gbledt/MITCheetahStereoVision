@@ -11,12 +11,13 @@ bottomPlane = planeModel([0 -1 0 0.1]);
 backPlane = planeModel([0 0 -1 1.5]);
 frontPlane = planeModel([0 0 1 -1.6]);
 
-topPlane = planeModel([0 1 0 -0.1]);
+topPlane = planeModel([0 1 0 -0.4]);
 
 planeList = allPlanes;
 
 % Get boundaries for each plane.
 % Front plane is horizontal, back plane is vertical
+
 planeList = [frontPlane.Parameters; planeList; topPlane.Parameters];
 [apRow, apCol] = size(planeList);
 

@@ -8,8 +8,8 @@ MATCH_CONTRAST = false;
 
 %% ================================%%
 load('stereoParams.mat');
-img1 = 'Data/left/image_8.jpg';
-img2 = 'Data/right/image_8.jpg';
+img1 = 'Data/left/image_14.jpg';
+img2 = 'Data/right/image_14.jpg';
 img1 = imread(img1);
 img2 = imread(img2);
 
@@ -21,7 +21,7 @@ frameRight = img2;
 [frameLeftRect, frameRightRect] = rectifyStereoImages(frameLeft, frameRight, stereoParams);
 
 figure, imshowpair(frameLeftRect, frameRightRect, 'montage');
-% figure, imshow(stereoAnaglyph(frameLeftRect, frameRightRect));
+figure, imshow(stereoAnaglyph(frameLeftRect, frameRightRect));
 
 % Convert to grayscale.
 frameLeftGray  = rgb2gray(frameLeftRect);

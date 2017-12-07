@@ -1,15 +1,16 @@
-function [sliceMap, poly3d] = FitPolytope(frameLeftGray, ptCloud, disparityMap)
+function [sliceMap, poly3d] = FitPolytope(frameLeftGray, ptCloud, disparityMap, NUM_CONTOURS)
     %% ============= Parameters ============= %%
-%     THETA_X_DEG = 12;
-%     THETA_X_RAD = degtorad(THETA_X_DEG);
-%     tform_x = affine3d(makehgtform('xrotate', THETA_X_RAD));
-% 
-%     THETA_Z_DEG = 5;
-%     THETA_Z_RAD = degtorad(THETA_Z_DEG);
-%     tform_z = affine3d(makehgtform('zrotate', THETA_Z_RAD));
+    THETA_X_DEG = 0;
+    THETA_X_RAD = degtorad(THETA_X_DEG);
+    tform_x = affine3d(makehgtform('xrotate', THETA_X_RAD));
 
-    % ptCloud = pctransform(ptCloud, tform_x);
-    % ptCloud = pctransform(ptCloud, tform_z);
+    THETA_Z_DEG = 0;
+    THETA_Z_RAD = degtorad(THETA_Z_DEG);
+    tform_z = affine3d(makehgtform('zrotate', THETA_Z_RAD));
+
+    ptCloud = pctransform(ptCloud, tform_x);
+%     ptCloud = pctransform(ptCloud, tform_z);
+    
     midPlane = planeModel([1, 0, 0, 0]);
     leftPlane = planeModel([1, 0, 0, 0.6]);
     rightPlane = planeModel([1, 0, 0, -0.6]);
@@ -17,11 +18,12 @@ function [sliceMap, poly3d] = FitPolytope(frameLeftGray, ptCloud, disparityMap)
     groundPlane = planeModel([0 -1 0 0.4]);
     frontPlane = planeModel([0 0 1 -1.6]);
     topPlane = planeModel([0 1 0 0.4]);
+    backPlane = planeModel([0 0 1 -2.5]);
 
     vertNorm = [0 0 -1]; % Unit vector to compare vertical planes against.
     horizNorm = [0 1 0]; % Unit vector to compare horiz planes against.
 
-    NUM_CONTOURS = 6;
+%     NUM_CONTOURS = 8;
     NUM_CONTOUR_LVL = 2;
 
     OBS_PADDING = 0.4; % meters in front and behind the obstacle that we care about.
@@ -32,13 +34,37 @@ function [sliceMap, poly3d] = FitPolytope(frameLeftGray, ptCloud, disparityMap)
     
     bestPoly = LargestContours(frameLeftGray, NUM_CONTOUR_LVL, NUM_CONTOURS);
     
+    % Plot the largest, non-overlapping contours from image.
+    figure, plot(bestPoly(1).X, bestPoly(1).Y);
+    hold on;
+    for ii = 2:NUM_CONTOURS
+        plot(bestPoly(ii).X, bestPoly(ii).Y);
+    end
+    axis ij;
+    
     [HEIGHT, WIDTH] = size(disparityMap);
     % Set rtnCloud to false because we dont care about the cloud any more.
     [fullCloud, horizPlanes, vertPlanes, planeList] = PlanarizePointCloud(ptCloud, bestPoly, WIDTH, HEIGHT, false);
     
+    % Remove consecutive vertical or horizontal planes from planeList.
+    
+    % Logic to determine bounding planes.
+    lastPlane = planeList(end,:)
+    vertNorm = [0 0 -1]; % Unit vector to compare vertical planes against.
+    horizNorm = [0 1 0]; % Unit vector to compare horiz planes against.
+    
+    horizScore = abs(dot(lastPlane(1:3), horizNorm));
+    vertScore = abs(dot(lastPlane(1:3), vertNorm));
+    
+    % If last plane horizontal, cut off with vertical plane.
+    if (horizScore / vertScore) > 1.5
+        planeList = [frontPlane.Parameters; planeList; backPlane.Parameters];
+    else
+        planeList = [frontPlane.Parameters; planeList; topPlane.Parameters];
+    end
+    
     % Get boundaries for each plane.
     % Front plane is horizontal, back plane is vertical
-    planeList = [frontPlane.Parameters; planeList; topPlane.Parameters];
     [apRow, apCol] = size(planeList);
 
     % For each plane, make a polygon using the plane before and after it.

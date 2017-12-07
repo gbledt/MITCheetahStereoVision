@@ -9,8 +9,8 @@ global image_index;
 vid_left = webcam(2);
 vid_right = webcam(1);
 
-NUM_IMAGES = 20;
-image_index = 7;
+NUM_IMAGES = 26;
+image_index = 13;
 
 figure('Name', 'Image capture'); 
 btn = uicontrol('Style', 'pushbutton', 'String', 'Capture',...
