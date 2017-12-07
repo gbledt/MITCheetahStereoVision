@@ -73,6 +73,14 @@ if options.PEOPLE_DETECTOR
     peopleDetector = vision.PeopleDetector('MinSize', [166 83]);
 end
 
+% Initialize the LCM publisher
+if options.BROADCAST_LCM
+    % Create the LCM instance
+    lc = lcm.lcm.LCM.getSingleton();
+    aggregator = lcm.lcm.MessageAggregator();
+    Msg = cheetahlcm.vision_data_t();
+end
+
 % Timing
 loop_timer = tic;
 t0 = toc(loop_timer);
@@ -135,7 +143,7 @@ while options.RUN_VISION && (options.LIVE_STREAM ||...
     
     % Broadcast out the LCM messages containing object data
     if options.BROADCAST_LCM
-        
+        lc.publish('CHEETAH_vision_data', visionMsg);
     end
     
     while ((toc(loop_timer) - t0) < 1/options.LOOP_RATE),end;

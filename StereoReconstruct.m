@@ -72,6 +72,20 @@ if options.PEOPLE_DETECTOR
     peopleDetector = vision.PeopleDetector('MinSize', [166 83]);
 end
 
+% Create the LCM object
+if options.BROADCAST_LCM
+    lc = lcm.lcm.LCM.getSingleton();
+    aggregator = lcm.lcm.MessageAggregator();
+    visionMsg = cheetahlcm.vision_data_t();
+    visionMsg.cpu_calc_time_microseconds = 0;
+    visionMsg.enabled = 0;
+    visionMsg.N_obstacles = 0;
+    dims = 10;
+    visionMsg.d(1:dims,1) = zeros(dims,1);
+    visionMsg.h(1:dims,1) = zeros(dims,1);
+    lc.publish('CHEETAH_vision_data', visionMsg);
+end
+
 % Timing
 loop_timer = tic;
 t0 = toc(loop_timer);
@@ -144,7 +158,13 @@ while options.RUN_VISION && (options.LIVE_STREAM ||...
     
     % Broadcast out the LCM messages containing object data
     if options.BROADCAST_LCM
-        
+        visionMsg.cpu_calc_time_microseconds = (toc(loop_timer) - t0)*(1e6);
+        visionMsg.enabled = 1;
+        visionMsg.N_obstacles = size(sliceMap,1);
+        dims = min(visionMsg.N_obstacles,10);
+        visionMsg.d(1:dims,1) = sliceMap(1:dims,1);
+        visionMsg.h(1:dims,1) = sliceMap(1:dims,2);
+        lc.publish('CHEETAH_vision_data', visionMsg);
     end
     
     while ((toc(loop_timer) - t0) < 1/options.LOOP_RATE),end;

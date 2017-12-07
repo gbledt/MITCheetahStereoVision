@@ -18,11 +18,11 @@ function [xyz_point, status] = LinePlaneIntersect(line_direction, line_pt, plane
     if abs(denom) < 0.0001
         % Case 1: num is also zero, line is on the plane.
         if abs(num) < 0.0001
-            disp("Line is on the plane");
+            disp('Line is on the plane');
             status = 1;
             xyz_point = line_pt;
         else
-            disp("Line is parallel to plane, no intersection");
+            disp('Line is parallel to plane, no intersection');
             status = 2;
             xyz_point = [inf, inf, inf];
         end
