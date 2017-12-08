@@ -35,7 +35,7 @@ function [sliceMap, poly3d] = FitPolytope(frameLeftGray, ptCloud, disparityMap,.
     ROI_X = 1;
     ROI_Y = 2;
     %% ========================================= %%
-    bestPoly = LargestContours(frameLeftGray, NUM_CONTOUR_LVL, NUM_CONTOURS, 0.2);
+    bestPoly = LargestContours(frameLeftGray, NUM_CONTOUR_LVL, NUM_CONTOURS, 0.1);
     
     % Plot the largest, non-overlapping contours from image.
     figure, plot(bestPoly(1).X, bestPoly(1).Y);
@@ -47,8 +47,8 @@ function [sliceMap, poly3d] = FitPolytope(frameLeftGray, ptCloud, disparityMap,.
     
     [HEIGHT, WIDTH] = size(disparityMap);
     % Set rtnCloud to false because we dont care about the cloud any more.
-    [fullCloud, horizPlanes, vertPlanes, planeList] = PlanarizePointCloud(ptCloud, bestPoly, WIDTH, HEIGHT, false);
-    
+    [fullCloud, horizPlanes, vertPlanes, planeList] = PlanarizePointCloud(ptCloud, bestPoly, WIDTH, HEIGHT, true);
+    figure, pcshow(fullCloud);
     % Remove consecutive vertical or horizontal planes from planeList.
     [row, col] = size(planeList);
     newPlaneList = planeList(1,:);
@@ -59,6 +59,11 @@ function [sliceMap, poly3d] = FitPolytope(frameLeftGray, ptCloud, disparityMap,.
         
         angle = acos(dot(p1(1:3), p2(1:3)) / (norm(p1(1:3)) * norm(p2(1:3))));
         angle = abs(radtodeg(angle))
+        
+        % Skip planes that have a large x component of normal
+        % These are weird sideways planes that could cause problems.
+        % Also skip planes that have a shallow angle with the previous
+        % plane.
         if angle < 20 || angle > 160 || p2(1) > 0.1
             disp('skipping');
         else

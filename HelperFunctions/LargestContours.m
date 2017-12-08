@@ -1,6 +1,7 @@
 function [polygons] = LargestContours(frame, cntLevels, K, IOU_THRESH)
     % Get contours from the image.
     set(groot,'defaultFigureVisible','off')
+%     blurred = imgaussfilt(frame,3);
     [C, h] = imcontour(frame, cntLevels);
     set(groot,'defaultFigureVisible','on')
     cMatrix = h.ContourMatrix;
@@ -47,6 +48,7 @@ function [polygons] = LargestContours(frame, cntLevels, K, IOU_THRESH)
             
             % If large IOU, these are redundant contours.
             if (intersect_area / union_area) > IOU_THRESH
+                disp('removing overlapping planes');
                 ii = ii + 1;
                 break   
             end

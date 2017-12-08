@@ -9,13 +9,13 @@ MATCH_CONTRAST = false;
 close all;
 
 %% ================================%%
-% load('stereoParams12-5.mat');
-% img1 = 'Data/left/image_7.jpg';
-% img2 = 'Data/right/image_7.jpg';
+load('stereoParams12-5.mat');
+img1 = 'Data/left/image_7.jpg';
+img2 = 'Data/right/image_7.jpg';
 
-load('stereoParams.mat');
-img1 = 'Data/left/image_15.jpg';
-img2 = 'Data/right/image_15.jpg';
+% load('stereoParams.mat');
+% img1 = 'Data/left/image_15.jpg';
+% img2 = 'Data/right/image_15.jpg';
 
 img1 = imread(img1);
 img2 = imread(img2);
@@ -66,9 +66,9 @@ player3D = pcplayer([-3, 3], [-3, 3], [0, 8], 'VerticalAxis', 'y', ...
     'VerticalAxisDir', 'down');
 view(player3D, ptCloud);
 
-close all;
+% close all;
 
-[sliceMap, poly3d] = FitPolytope(frameLeftGray, ptCloud, disparityMap, 6, 10, -2);
+[sliceMap, poly3d] = FitPolytope(frameLeftGray, ptCloud, disparityMap, 6, 0,0);
 PlotPoly3D(poly3d);
 
 figure, plot(sliceMap(:,1), sliceMap(:,2));
