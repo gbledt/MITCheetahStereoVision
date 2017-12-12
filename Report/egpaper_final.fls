@@ -1,208 +1,258 @@
-PWD C:/Users/mknowles/Documents/MITCheetahStereoVision/Report
-INPUT c:/texlive/2017/texmf.cnf
-INPUT c:/texlive/2017/texmf-dist/web2c/texmf.cnf
-INPUT c:/texlive/2017/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/mknowles/Documents/MITCheetahStereoVision/Report/egpaper_final.tex
-OUTPUT C:\Users\mknowles\Documents\MITCheetahStereoVision\Report/egpaper_final.log
-INPUT c:/texlive/2017/texmf-dist/tex/latex/base/article.cls
-INPUT c:/texlive/2017/texmf-dist/tex/latex/base/article.cls
-INPUT c:/texlive/2017/texmf-dist/tex/latex/base/size10.clo
-INPUT c:/texlive/2017/texmf-dist/tex/latex/base/size10.clo
-INPUT C:\Users\mknowles\Documents\MITCheetahStereoVision\Report/cvpr.sty
-INPUT C:\Users\mknowles\Documents\MITCheetahStereoVision\Report/cvpr.sty
-INPUT C:\Users\mknowles\Documents\MITCheetahStereoVision\Report/eso-pic.sty
-INPUT C:\Users\mknowles\Documents\MITCheetahStereoVision\Report/eso-pic.sty
-INPUT C:\Users\mknowles\Documents\MITCheetahStereoVision\Report/cvpr_eso.sty
-INPUT C:\Users\mknowles\Documents\MITCheetahStereoVision\Report/cvpr_eso.sty
-INPUT c:/texlive/2017/texmf-dist/tex/latex/graphics/keyval.sty
-INPUT c:/texlive/2017/texmf-dist/tex/latex/graphics/keyval.sty
-INPUT c:/texlive/2017/texmf-dist/tex/latex/tools/xspace.sty
-INPUT c:/texlive/2017/texmf-dist/tex/latex/tools/xspace.sty
-INPUT c:/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/adobe/helvetic/phvb.tfm
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/adobe/times/ptmb.tfm
-INPUT c:/texlive/2017/texmf-dist/tex/latex/psnfss/times.sty
-INPUT c:/texlive/2017/texmf-dist/tex/latex/psnfss/times.sty
-INPUT c:/texlive/2017/texmf-dist/tex/latex/graphics/epsfig.sty
-INPUT c:/texlive/2017/texmf-dist/tex/latex/graphics/epsfig.sty
-INPUT c:/texlive/2017/texmf-dist/tex/latex/graphics/graphicx.sty
-INPUT c:/texlive/2017/texmf-dist/tex/latex/graphics/graphicx.sty
-INPUT c:/texlive/2017/texmf-dist/tex/latex/graphics/graphics.sty
-INPUT c:/texlive/2017/texmf-dist/tex/latex/graphics/graphics.sty
-INPUT c:/texlive/2017/texmf-dist/tex/latex/graphics/trig.sty
-INPUT c:/texlive/2017/texmf-dist/tex/latex/graphics/trig.sty
-INPUT c:/texlive/2017/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
-INPUT c:/texlive/2017/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
-INPUT c:/texlive/2017/texmf-dist/tex/latex/graphics-def/pdftex.def
-INPUT c:/texlive/2017/texmf-dist/tex/latex/graphics-def/pdftex.def
-INPUT c:/texlive/2017/texmf-dist/tex/latex/amsmath/amsmath.sty
-INPUT c:/texlive/2017/texmf-dist/tex/latex/amsmath/amsmath.sty
-INPUT c:/texlive/2017/texmf-dist/tex/latex/amsmath/amstext.sty
-INPUT c:/texlive/2017/texmf-dist/tex/latex/amsmath/amstext.sty
-INPUT c:/texlive/2017/texmf-dist/tex/latex/amsmath/amsgen.sty
-INPUT c:/texlive/2017/texmf-dist/tex/latex/amsmath/amsgen.sty
-INPUT c:/texlive/2017/texmf-dist/tex/latex/amsmath/amsbsy.sty
-INPUT c:/texlive/2017/texmf-dist/tex/latex/amsmath/amsbsy.sty
-INPUT c:/texlive/2017/texmf-dist/tex/latex/amsmath/amsopn.sty
-INPUT c:/texlive/2017/texmf-dist/tex/latex/amsmath/amsopn.sty
-INPUT c:/texlive/2017/texmf-dist/tex/latex/amsfonts/amssymb.sty
-INPUT c:/texlive/2017/texmf-dist/tex/latex/amsfonts/amssymb.sty
-INPUT c:/texlive/2017/texmf-dist/tex/latex/amsfonts/amsfonts.sty
-INPUT c:/texlive/2017/texmf-dist/tex/latex/amsfonts/amsfonts.sty
-INPUT c:/texlive/2017/texmf-dist/tex/latex/hyperref/hyperref.sty
-INPUT c:/texlive/2017/texmf-dist/tex/latex/hyperref/hyperref.sty
-INPUT c:/texlive/2017/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
-INPUT c:/texlive/2017/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
-INPUT c:/texlive/2017/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
-INPUT c:/texlive/2017/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
-INPUT c:/texlive/2017/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
-INPUT c:/texlive/2017/texmf-dist/tex/generic/ifxetex/ifxetex.sty
-INPUT c:/texlive/2017/texmf-dist/tex/generic/ifxetex/ifxetex.sty
-INPUT c:/texlive/2017/texmf-dist/tex/latex/oberdiek/auxhook.sty
-INPUT c:/texlive/2017/texmf-dist/tex/latex/oberdiek/auxhook.sty
-INPUT c:/texlive/2017/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-INPUT c:/texlive/2017/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-INPUT c:/texlive/2017/texmf-dist/tex/latex/hyperref/pd1enc.def
-INPUT c:/texlive/2017/texmf-dist/tex/latex/hyperref/pd1enc.def
-INPUT c:/texlive/2017/texmf-dist/tex/latex/latexconfig/hyperref.cfg
-INPUT c:/texlive/2017/texmf-dist/tex/latex/latexconfig/hyperref.cfg
-INPUT c:/texlive/2017/texmf-dist/tex/latex/url/url.sty
-INPUT c:/texlive/2017/texmf-dist/tex/latex/url/url.sty
-INPUT c:/texlive/2017/texmf-dist/tex/latex/hyperref/hpdftex.def
-INPUT c:/texlive/2017/texmf-dist/tex/latex/hyperref/hpdftex.def
-INPUT c:/texlive/2017/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
-INPUT c:/texlive/2017/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
-INPUT C:\Users\mknowles\Documents\MITCheetahStereoVision\Report/egpaper_final.aux
-INPUT C:\Users\mknowles\Documents\MITCheetahStereoVision\Report/egpaper_final.aux
-OUTPUT C:\Users\mknowles\Documents\MITCheetahStereoVision\Report/egpaper_final.aux
-INPUT c:/texlive/2017/texmf-dist/tex/latex/psnfss/ot1ptm.fd
-INPUT c:/texlive/2017/texmf-dist/tex/latex/psnfss/ot1ptm.fd
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/adobe/times/ptmr7t.tfm
-INPUT c:/texlive/2017/texmf-dist/tex/latex/graphics/color.sty
-INPUT c:/texlive/2017/texmf-dist/tex/latex/graphics/color.sty
-INPUT c:/texlive/2017/texmf-dist/tex/latex/graphics/color.sty
-INPUT c:/texlive/2017/texmf-dist/tex/latex/graphics-cfg/color.cfg
-INPUT c:/texlive/2017/texmf-dist/tex/latex/graphics-cfg/color.cfg
-INPUT c:/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
-INPUT c:/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
-INPUT c:/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-INPUT c:/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-INPUT c:/texlive/2017/texmf-dist/tex/latex/oberdiek/grfext.sty
-INPUT c:/texlive/2017/texmf-dist/tex/latex/oberdiek/grfext.sty
-INPUT c:/texlive/2017/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-INPUT c:/texlive/2017/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-INPUT c:/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
-INPUT c:/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
-INPUT c:/texlive/2017/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
-INPUT c:/texlive/2017/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
-OUTPUT C:\Users\mknowles\Documents\MITCheetahStereoVision\Report/egpaper_final.pdf
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/adobe/times/ptmr7t.tfm
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/adobe/times/ptmr7t.tfm
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
-INPUT c:/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
-INPUT c:/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
-INPUT c:/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
-INPUT c:/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
-INPUT c:/texlive/2017/texmf-dist/tex/latex/psnfss/ot1pcr.fd
-INPUT c:/texlive/2017/texmf-dist/tex/latex/psnfss/ot1pcr.fd
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/adobe/times/ptmri7t.tfm
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/adobe/times/ptmro7t.tfm
-INPUT c:/Users/mknowles/Documents/MITCheetahStereoVision/Report/Sections/Introduction.tex
-INPUT c:/Users/mknowles/Documents/MITCheetahStereoVision/Report/Sections/Introduction.tex
-INPUT C:\Users\mknowles\Documents\MITCheetahStereoVision\Report/Figures/RobotIntro.pdf
-INPUT c:/Users/mknowles/Documents/MITCheetahStereoVision/Report/Figures/RobotIntro.pdf
-INPUT c:/Users/mknowles/Documents/MITCheetahStereoVision/Report/Figures/RobotIntro.pdf
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/adobe/times/ptmr7t.tfm
-INPUT c:/Users/mknowles/Documents/MITCheetahStereoVision/Report/Sections/Related-Work.tex
-INPUT c:/Users/mknowles/Documents/MITCheetahStereoVision/Report/Sections/Related-Work.tex
-INPUT c:/Users/mknowles/Documents/MITCheetahStereoVision/Report/Sections/Approach.tex
-INPUT c:/Users/mknowles/Documents/MITCheetahStereoVision/Report/Sections/Approach.tex
-INPUT c:/texlive/2017/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
-INPUT c:/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map
-INPUT c:/texlive/2017/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
-INPUT c:/texlive/2017/texmf-dist/fonts/vf/adobe/courier/pcrr7t.vf
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm
-INPUT c:/texlive/2017/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
-INPUT c:/texlive/2017/texmf-dist/fonts/vf/adobe/times/ptmri7t.vf
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
-INPUT c:/texlive/2017/texmf-dist/fonts/vf/adobe/times/ptmro7t.vf
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/adobe/times/ptmro8r.tfm
-INPUT c:/texlive/2017/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
-INPUT c:/texlive/2017/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
-INPUT C:\Users\mknowles\Documents\MITCheetahStereoVision\Report/Sections/Figures/Final-Project-Pipeline.png
-INPUT c:/Users/mknowles/Documents/MITCheetahStereoVision/Report/Sections/Figures/Final-Project-Pipeline.png
-INPUT c:/Users/mknowles/Documents/MITCheetahStereoVision/Report/Sections/Figures/Final-Project-Pipeline.png
-INPUT C:\Users\mknowles\Documents\MITCheetahStereoVision\Report/Sections/Figures/example_stereo_pair.jpg
-INPUT c:/Users/mknowles/Documents/MITCheetahStereoVision/Report/Sections/Figures/example_stereo_pair.jpg
-INPUT c:/Users/mknowles/Documents/MITCheetahStereoVision/Report/Sections/Figures/example_stereo_pair.jpg
-INPUT C:\Users\mknowles\Documents\MITCheetahStereoVision\Report/Sections/Figures/stereo_anaglyph.png
-INPUT c:/Users/mknowles/Documents/MITCheetahStereoVision/Report/Sections/Figures/stereo_anaglyph.png
-INPUT c:/Users/mknowles/Documents/MITCheetahStereoVision/Report/Sections/Figures/stereo_anaglyph.png
-INPUT C:\Users\mknowles\Documents\MITCheetahStereoVision\Report/Sections/Figures/example_stairs_pointcloud.jpg
-INPUT c:/Users/mknowles/Documents/MITCheetahStereoVision/Report/Sections/Figures/example_stairs_pointcloud.jpg
-INPUT c:/Users/mknowles/Documents/MITCheetahStereoVision/Report/Sections/Figures/example_stairs_pointcloud.jpg
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
-INPUT c:/texlive/2017/texmf-dist/fonts/vf/adobe/times/ptmb.vf
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
-INPUT c:/texlive/2017/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
-INPUT C:\Users\mknowles\Documents\MITCheetahStereoVision\Report/Sections/Figures/good_contour_plot_12-7.png
-INPUT c:/Users/mknowles/Documents/MITCheetahStereoVision/Report/Sections/Figures/good_contour_plot_12-7.png
-INPUT c:/Users/mknowles/Documents/MITCheetahStereoVision/Report/Sections/Figures/good_contour_plot_12-7.png
-INPUT C:\Users\mknowles\Documents\MITCheetahStereoVision\Report/Sections/Figures/polytope_example.png
-INPUT c:/Users/mknowles/Documents/MITCheetahStereoVision/Report/Sections/Figures/polytope_example.png
-INPUT c:/Users/mknowles/Documents/MITCheetahStereoVision/Report/Sections/Figures/polytope_example.png
-INPUT C:\Users\mknowles\Documents\MITCheetahStereoVision\Report/Sections/Figures/polytope_diagonal_geom.jpg
-INPUT c:/Users/mknowles/Documents/MITCheetahStereoVision/Report/Sections/Figures/polytope_diagonal_geom.jpg
-INPUT c:/Users/mknowles/Documents/MITCheetahStereoVision/Report/Sections/Figures/polytope_diagonal_geom.jpg
-INPUT c:/Users/mknowles/Documents/MITCheetahStereoVision/Report/Sections/Results.tex
-INPUT c:/Users/mknowles/Documents/MITCheetahStereoVision/Report/Sections/Results.tex
-INPUT C:\Users\mknowles\Documents\MITCheetahStereoVision\Report/Figures/BlockDiagram.pdf
-INPUT c:/Users/mknowles/Documents/MITCheetahStereoVision/Report/Figures/BlockDiagram.pdf
-INPUT c:/Users/mknowles/Documents/MITCheetahStereoVision/Report/Figures/BlockDiagram.pdf
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
-INPUT C:\Users\mknowles\Documents\MITCheetahStereoVision\Report/Figures/RobotStairsRelation.pdf
-INPUT c:/Users/mknowles/Documents/MITCheetahStereoVision/Report/Figures/RobotStairsRelation.pdf
-INPUT c:/Users/mknowles/Documents/MITCheetahStereoVision/Report/Figures/RobotStairsRelation.pdf
-INPUT C:\Users\mknowles\Documents\MITCheetahStereoVision\Report/Figures/RobotStairs.pdf
-INPUT c:/Users/mknowles/Documents/MITCheetahStereoVision/Report/Figures/RobotStairs.pdf
-INPUT c:/Users/mknowles/Documents/MITCheetahStereoVision/Report/Figures/RobotStairs.pdf
-INPUT c:/Users/mknowles/Documents/MITCheetahStereoVision/Report/Sections/Conclusion.tex
-INPUT c:/Users/mknowles/Documents/MITCheetahStereoVision/Report/Sections/Conclusion.tex
-INPUT C:\Users\mknowles\Documents\MITCheetahStereoVision\Report/egpaper_final.bbl
-INPUT C:\Users\mknowles\Documents\MITCheetahStereoVision\Report/egpaper_final.bbl
-INPUT c:/texlive/2017/texmf-dist/fonts/tfm/adobe/times/ptmri7t.tfm
-INPUT C:\Users\mknowles\Documents\MITCheetahStereoVision\Report/egpaper_final.aux
+PWD /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report
+INPUT /etc/texmf/web2c/texmf.cnf
+INPUT /usr/share/texmf/web2c/texmf.cnf
+INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
+INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/egpaper_final.tex
+OUTPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/egpaper_final.log
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/cvpr.sty
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/cvpr.sty
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/eso-pic.sty
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/eso-pic.sty
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/cvpr_eso.sty
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/cvpr_eso.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+INPUT /usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvb.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmb.tfm
+INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/times.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/times.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/epsfig.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/epsfig.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/calrsfs/calrsfs.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/calrsfs/calrsfs.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/egpaper_final.aux
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/egpaper_final.aux
+OUTPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/egpaper_final.aux
+INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmr7t.tfm
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+INPUT /usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+OUTPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/egpaper_final.pdf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmr7t.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmr7t.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+INPUT /usr/share/texlive/texmf-dist/tex/latex/calrsfs/OMSrsfs.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/calrsfs/OMSrsfs.fd
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/rsfs/rsfs7.tfm
+INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmri7t.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmro7t.tfm
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Introduction.tex
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Introduction.tex
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Figures/RobotIntro.pdf
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Figures/RobotIntro.pdf
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Figures/RobotIntro.pdf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmr7t.tfm
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Related-Work.tex
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Related-Work.tex
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Approach.tex
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Approach.tex
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
+INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/courier/pcrr7t.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/times/ptmri7t.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/times/ptmro7t.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmro8r.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/Final-Project-Pipeline.png
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/Final-Project-Pipeline.png
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/Final-Project-Pipeline.png
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/example_stereo_pair.jpg
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/example_stereo_pair.jpg
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/example_stereo_pair.jpg
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/stereo_anaglyph.png
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/stereo_anaglyph.png
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/stereo_anaglyph.png
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/rsfs/rsfs7.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/example_stairs_pointcloud.jpg
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/example_stairs_pointcloud.jpg
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/example_stairs_pointcloud.jpg
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/times/ptmb.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/good_contour_plot_12-7.png
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/good_contour_plot_12-7.png
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/good_contour_plot_12-7.png
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/polytope_example.png
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/polytope_example.png
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/polytope_example.png
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/polytope_sideview.png
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/polytope_sideview.png
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/polytope_sideview.png
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/polytope_diagonal_geom.jpg
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/polytope_diagonal_geom.jpg
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/polytope_diagonal_geom.jpg
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/geom_sideview_2d.jpg
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/geom_sideview_2d.jpg
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/geom_sideview_2d.jpg
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Results.tex
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Results.tex
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/simmons-stereo-pair.jpg
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/simmons-stereo-pair.jpg
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/simmons-stereo-pair.jpg
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/simmons-stairs-depthmap.jpg
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/simmons-stairs-depthmap.jpg
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/simmons-stairs-depthmap.jpg
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/simmons-stairs-ptcloud.jpg
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/simmons-stairs-ptcloud.jpg
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/simmons-stairs-ptcloud.jpg
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/simmons-stairs-diagonal-geom.jpg
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/simmons-stairs-diagonal-geom.jpg
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/simmons-stairs-diagonal-geom.jpg
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Figures/BlockDiagram.pdf
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Figures/BlockDiagram.pdf
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Figures/BlockDiagram.pdf
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Figures/RobotStairsRelation.pdf
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Figures/RobotStairsRelation.pdf
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Figures/RobotStairsRelation.pdf
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Figures/RobotStairs.pdf
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Figures/RobotStairs.pdf
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Figures/RobotStairs.pdf
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Conclusion.tex
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Conclusion.tex
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/egpaper_final.bbl
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/egpaper_final.bbl
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmri7t.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/times/ptmri7t.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmri8r.tfm
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/egpaper_final.aux
+INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs7.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb

@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: egpaper_final.aux
+The style file: ieee.bst
+Database file #1: egbib.bib
+Name 1 in "Torr, P. H. S., and A. Zisserman" has a comma at the end for entry msac-article
+while executing---line 1073 of file ieee.bst
+Warning--empty journal in pavlidis
+Name 1 in "Torr, P. H. S., and A. Zisserman" has a comma at the end for entry msac-article
+while executing---line 1116 of file ieee.bst
+You've used 4 entries,
+            2120 wiz_defined-function locations,
+            519 strings with 4422 characters,
+and the built_in function-call counts, 1247 in all, are:
+= -- 118
+> -- 50
+< -- 2
++ -- 20
+- -- 16
+* -- 75
+:= -- 211
+add.period$ -- 12
+call.type$ -- 4
+change.case$ -- 20
+chr.to.int$ -- 0
+cite$ -- 5
+duplicate$ -- 53
+empty$ -- 100
+format.name$ -- 16
+if$ -- 262
+int.to.chr$ -- 0
+int.to.str$ -- 4
+missing$ -- 4
+newline$ -- 23
+num.names$ -- 8
+pop$ -- 24
+preamble$ -- 1
+purify$ -- 16
+quote$ -- 0
+skip$ -- 43
+stack$ -- 0
+substring$ -- 69
+swap$ -- 14
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 16
+warning$ -- 1
+while$ -- 10
+width$ -- 5
+write$ -- 43
+(There were 2 error messages)

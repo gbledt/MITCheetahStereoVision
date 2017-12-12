@@ -1,0 +1,28 @@
+\begin{thebibliography}{1}\itemsep=-1pt
+
+\bibitem{Bledt2018}
+G.~Bledt, P.~Wensing, S.~Ingersoll, and S.~Kim.
+\newblock Contact model fusion for event-based locomotion in unstructured
+  terrains.
+\newblock {\em (submitted) 2018 IEEE International Conference on Robotics and
+  Automation (ICRA)}, 2018.
+
+\bibitem{1467526}
+H.~Hirschmuller.
+\newblock Accurate and efficient stereo processing by semi-global matching and
+  mutual information.
+\newblock In {\em 2005 IEEE Computer Society Conference on Computer Vision and
+  Pattern Recognition (CVPR'05)}, volume~2, pages 807--814 vol. 2, June 2005.
+
+\bibitem{pavlidis}
+T.~Pavlidis.
+\newblock Algorithms for graphics and image processing.
+\newblock 1982.
+
+\bibitem{msac-article}
+P.~H.~S. Torr and A.~Zisserman.
+\newblock Mlesac: A new robust estimator with application to estimating image
+  geometry.
+\newblock {\em Computer Vision and Image Understanding}, 2000.
+
+\end{thebibliography}

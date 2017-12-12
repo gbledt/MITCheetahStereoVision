@@ -11,8 +11,8 @@ Our pipeline is summarized in Figure \ref{overview-diagram}. We begin with a pai
 \label{overview-diagram}
 \end{figure}
 
-\subsection{Stereo Matching} \label{stereo-matching-section}
-
+\subsection{Stereo Matching for 3D Pointcloud} \label{stereo-matching-section}
+The goal for stereo vision is to take two separate pictures of the same scene from two cameras at known relative distances and orientations form each other and attempt to reconstruct the 3D version of the scene. This is the general principle behind the human vision system that has depth perception. In our experiment we set two parallel cameras about 8 cm apart in the same direction which results in pictures like the one in Figure \ref{stereo-image-pair}.
 \begin{figure}[!h]
 \centering
 \includegraphics[width=3.3in]{Sections/Figures/example_stereo_pair.jpg}
@@ -27,8 +27,13 @@ Our pipeline is summarized in Figure \ref{overview-diagram}. We begin with a pai
 \label{stereo-anaglyph}
 \end{figure}
 
-\subsection{Point Cloud from Depthmap} \label{pointcloud-section}
+In order to find the best match between the two images, we used a technique called Semi-Global Matching as described in \cite{1467526}. The basic premise follows an optimization that compares the two images with a matching cost defined by the following cost function
+\begin{align*}
+E(D) = \sum\limits_p(C(p,D_p)+\sum\limits_{q\in N_p}P_1T[|D_p-D_q|=1]+\\\sum\limits_{q\in N_p}P_2T[|D_p-D_q|>1])
+\end{align*}
+Here, the optimization travels along many paths throughout the image and the costs from each path are summed and the lowest cost disparity is chosen for each pixel. The cost function has the first term being the sum of the pixel matching costs for the disparities, the second term being a penalty for 1 pixel disparity, and the third being a large cost for bigger pixel disparities.
 
+The method results in a disparity image that gives the estimated depth to each pixel. This disparity is then used to create a 3D representation of the scene since we know the depth at each 2D pixel. This results in a pointcloud with $Z$ being the distance from the camera locations. The original image in then overlaid onto the pointcloud as seen in Figure \ref{pointcloud-example}. Although the pointcloud is not an exact representation of the actual scene, many post-processing steps were taken to smooth out the noise and extract features from the pointcloud.
 \begin{figure}[!h]
 \centering
 \includegraphics[width=3.3in]{Sections/Figures/example_stairs_pointcloud.jpg}
