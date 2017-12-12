@@ -1,11 +1,7 @@
-function [sliceMap, poly3d] = FitPolytope(frameLeftGray, ptCloud, disparityMap,...
-    NUM_CONTOURS, THETA_X_DEG, THETA_Z_DEG)
+function [sliceMap, poly3d] = FitPolytopeGeom(ptCloud, THETA_X_DEG, THETA_Z_DEG, NUM_HORIZONTAL, NUM_VERTICAL)
     %% ============= Parameters ============= %%
-%     THETA_X_DEG = 10;
     THETA_X_RAD = degtorad(THETA_X_DEG);
     tform_x = affine3d(makehgtform('xrotate', THETA_X_RAD));
-
-%     THETA_Z_DEG = -2;
     THETA_Z_RAD = degtorad(THETA_Z_DEG);
     tform_z = affine3d(makehgtform('zrotate', THETA_Z_RAD));
     
@@ -24,59 +20,80 @@ function [sliceMap, poly3d] = FitPolytope(frameLeftGray, ptCloud, disparityMap,.
     topPlane = planeModel([0 1 0 0.8]);
     backPlane = planeModel([0 0 1 -2.5]);
 
-    vertNorm = [0 0 -1]; % Unit vector to compare vertical planes against.
-    horizNorm = [0 1 0]; % Unit vector to compare horiz planes against.
-
-    NUM_CONTOURS = 6;
-    NUM_CONTOUR_LVL = 2;
-
     OBS_PADDING = 0.4; % meters in front and behind the obstacle that we care about.
     ROI_SAMPLES = 500; % How many points to use for active plane estimation?
     ROI_X = 1;
     ROI_Y = 2;
-    %% ========================================= %%
-    bestPoly = LargestContours(frameLeftGray, NUM_CONTOUR_LVL, NUM_CONTOURS, 0.1);
+    %% Fit horizontal and vertical planes to the cloud. %%
+    [allPlanes, horizPlanes, vertPlanes, inlierCloud] = FitPlanesGeom(ptCloud, NUM_HORIZONTAL, NUM_VERTICAL);
     
-    % Plot the largest, non-overlapping contours from image.
-    figure, plot(bestPoly(1).X, bestPoly(1).Y);
-    hold on;
-    for ii = 2:NUM_CONTOURS
-        plot(bestPoly(ii).X, bestPoly(ii).Y);
+    %%  Find intersection of vertical planes with the ground. %%
+    heightTransPts = []; % Stores points where the height of the ground is likely to change.
+    [vpRow, vpCol] = size(vertPlanes);
+    for ii = 1:vpRow
+        vp = vertPlanes(ii, :); % Extract parameters from this vertical plane.
+        N1 = vp(1:3);
+        A1 = GetPointOnPlane(vp);
+
+        N2 = groundPlane.Normal; % Get the parameters from ground plane.
+        A2 = GetPointOnPlane(groundPlane.Parameters);
+
+        % Find line where the vertical plane hits ground.
+        [linePoint, lineVector, check]= PlaneIntersect(N1, A1, N2, A2);
+
+        % Get the point where this line intersects ground (coplanar in this
+        % case).
+        intPoint = LinePlaneIntersect(lineVector, linePoint, groundPlane.Parameters);
+
+        % The z-coord is the distance of that vertical plane from camera.
+        heightTransPts = [heightTransPts, intPoint(3)];
     end
-    axis ij;
+
+    %% Find the active horizontal plane between transition pts %%
+     % Add foreground and background pt
+    [b, ix] = sort(heightTransPts);
+    heightTransPts = heightTransPts(ix); % Make sure these are in order.
+    vertPlanes = vertPlanes(ix,:);
+%     heightTransPts = [heightTransPts(1)-OBS_PADDING, heightTransPts, heightTransPts(end)+OBS_PADDING];
     
-    [HEIGHT, WIDTH] = size(disparityMap);
-    % Set rtnCloud to false because we dont care about the cloud any more.
-    [fullCloud, horizPlanes, vertPlanes, planeList] = PlanarizePointCloud(ptCloud, bestPoly, WIDTH, HEIGHT, true);
-    figure, pcshow(fullCloud);
-    % Remove consecutive vertical or horizontal planes from planeList.
-    [row, col] = size(planeList);
-    newPlaneList = planeList(1,:);
-    xx = 2;
-    while xx <= row
-        p1 = newPlaneList(end,:);
-        p2 = planeList(xx,:);
-        
-        angle = acos(dot(p1(1:3), p2(1:3)) / (norm(p1(1:3)) * norm(p2(1:3))));
-        angle = abs(radtodeg(angle))
-        
-        % Skip planes that have a large x component of normal
-        % These are weird sideways planes that could cause problems.
-        % Also skip planes that have a shallow angle with the previous
-        % plane.
-        if angle < 20 || angle > 160 || p2(1) > 0.1
-            disp('skipping');
-        else
-            newPlaneList = [newPlaneList; p2];
+    activeHorizPlanes = zeros(numel(heightTransPts)-1, 4);
+    [hpRow, hpCol] = size(horizPlanes);
+
+    % For each z-region (between transition points)
+    % Find the plane that best fits points in that region.
+    % This is the 'active' plane in that region.
+    horizPlaneScores = [];
+    for zz = 1:(numel(heightTransPts)-1)
+        roi = [-ROI_X ROI_X; -ROI_Y ROI_Y; heightTransPts(zz) heightTransPts(zz+1)];
+        pointsInROI = findPointsInROI(inlierCloud, roi);
+        sample = datasample(pointsInROI, ROI_SAMPLES);
+        samplePts = select(inlierCloud, sample);
+
+        bestScore = inf;
+        bestPlane = 1;
+        for pp = 1:hpRow
+            score = DistPointPlane(samplePts.Location, horizPlanes(pp,:)) / ROI_SAMPLES;
+            if score < bestScore
+                bestPlane = pp;
+                bestScore = score;
+            end
         end
-        xx = xx + 1;
+        activeHorizPlanes(zz,:) = horizPlanes(bestPlane,:);
+        horizPlaneScores = [horizPlaneScores, bestScore];
     end
-    
-    planeList = newPlaneList;
+
+    horizPlaneScores
+    heightTransPts
+    % Combine the vertical and horiz planes.
+    % For N vert planes, we have N-1 horizontal planes.
+    planeList = [];
+    for ii = 1:(vpRow-1)
+        planeList = [planeList; vertPlanes(ii,:); activeHorizPlanes(ii,:)];
+    end
+    planeList = [planeList; vertPlanes(ii+1,:)];
     
     % Logic to determine bounding planes.
     lastPlane = planeList(end,:);
-    
     horizScore = abs(dot(lastPlane(1:3), horizNorm));
     vertScore = abs(dot(lastPlane(1:3), vertNorm));
     
