@@ -22,7 +22,7 @@ The goal for stereo vision is to take two separate pictures of the same scene fr
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=3.3in]{Sections/Figures/stereo_anaglyph.png}
+\includegraphics[width=2.3in]{Sections/Figures/stereo_anaglyph.png}
 \caption{An example stereo anaglyph.}
 \label{stereo-anaglyph}
 \end{figure}
@@ -45,6 +45,8 @@ The method results in a disparity image that gives the estimated depth to each p
 
 In order to estimate a polytope representation of an obstacle, decompose its point cloud into a set of planes. We demonstrate two main approaches for finding planar surfaces of an obstacle. We describe the Contour Method in Section \ref{contour-method} and the Orientation Method in \ref{orient-method}.
 
+Each method has its advantages and limitations. While the Contour Method can generalize to planar surfaces with arbitary orientation, it is highly sensitive to the texture and edges of obstacles. The Orientation Method is more robust to appearance, but is limited to vertical and horizontal planes.
+
 In both approaches, MSAC (M-Estimator SAmple Consensus \cite{msac-article}) is the algorithm used for plane estimation. In \cite{msac-article}, Zisserman et. al. show that MSAC is more robust than RANSAC for estimating geometric relationships in point cloud data, at no additional computational cost.
 
 \subsubsection{Contour Method} \label{contour-method}
@@ -59,7 +61,7 @@ We then project our candidate contours into the point cloud, and find 3D points 
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=3.3in]{Sections/Figures/good_contour_plot_12-7.png}
+\includegraphics[width=2.5in]{Sections/Figures/good_contour_plot_12-7.png}
 \caption{An example contour plot of the stairs in Figure \ref{stereo-anaglyph}. Here we have shown the eight largest contours in the image by area.}
 \label{contours-example}
 \end{figure}
@@ -80,15 +82,15 @@ When using the Contour Method in Section \ref{contour-method}, we assume that th
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=3.3in]{Sections/Figures/polytope_example.png}
+\includegraphics[width=2.5in]{Sections/Figures/polytope_example.png}
 \caption{A polytope reconstruction of the image in Figure \ref{stereo-image-pair}, using the Contour Method (See Section \ref{contour-method}). The pink, red, and blue planes correspond to horizontal faces of the stairs. The light-blue, green, and yellow planes are vertical faces.}
 \label{polytope-diagonal-contour}
 \end{figure}
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=3.3in]{Sections/Figures/polytope_sideview.png}
-\caption{The polytope from Figure \ref{polytope-diagonal-contour} viewed from the side. The vertical faces of this polytope (light-blue, green, yellow) are very close to the groundtruth dimension of 20cm. Similarly, the remaining horizontal faces are close to their groundtruth dimension of 31cm. Note that the pink plane is cut off by a bounding box around the polytope, so it does not appear to be the correct size.}
+\includegraphics[width=2.5in]{Sections/Figures/polytope_sideview.png}
+\caption{The polytope from Figure \ref{polytope-diagonal-contour} viewed from the side. The vertical faces of this polytope (light-blue, green, yellow) are very close to the groundtruth dimension of 20cm. Similarly, the remaining horizontal faces are close to their groundtruth dimension of 31cm.}
 \label{polytope-sideview-contour}
 \end{figure}
 
@@ -104,8 +106,8 @@ When using the Orientation Method in Section \ref{orient-method}, we use a sampl
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=3.3in]{Sections/Figures/geom_sideview_2d.jpg}
-\caption{The polytope from Figure \ref{polytope-diagonal-orient} viewed from the side. Again, we see that vertical and horizontal planes are close to the groundtruth dimensions of 20cm and 31cm, respectively.}
+\includegraphics[width=2.5in]{Sections/Figures/geom_sideview_2d.jpg}
+\caption{The polytope from Figure \ref{polytope-diagonal-orient} viewed from the side. Again, we see that vertical and horizontal planes are close to the groundtruth dimensions.}
 \label{polytope-sideview-orient}
 \end{figure}
 
