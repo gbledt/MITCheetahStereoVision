@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.25)  4 DEC 2017 18:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.25)  12 DEC 2017 00:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -376,38 +376,290 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (/home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Repo
 rt/Sections/Introduction.tex)
 (/home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Repo
-rt/egpaper_final.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 66.
+rt/Sections/Related-Work.tex)
+(/home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Repo
+rt/Sections/Approach.tex
+<Sections/Figures/Final-Project-Pipeline.png, id=6, 362.35374pt x 422.57875pt>
+File: Sections/Figures/Final-Project-Pipeline.png Graphic file (type png)
+
+<use Sections/Figures/Final-Project-Pipeline.png>
+Package pdftex.def Info: Sections/Figures/Final-Project-Pipeline.png used on in
+put line 10.
+(pdftex.def)             Requested size: 144.54pt x 168.56424pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Sections/Figures/example_stereo_pair.jpg, id=8, 1407.2575pt x 679.53876pt>
+File: Sections/Figures/example_stereo_pair.jpg Graphic file (type jpg)
+
+<use Sections/Figures/example_stereo_pair.jpg>
+Package pdftex.def Info: Sections/Figures/example_stereo_pair.jpg used on input
+ line 19.
+(pdftex.def)             Requested size: 238.49121pt x 115.15715pt.
+
+Overfull \hbox (1.35527pt too wide) in paragraph at lines 19--20
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Sections/Figures/stereo_anaglyph.png, id=9, 673.76718pt x 512.66531pt>
+File: Sections/Figures/stereo_anaglyph.png Graphic file (type png)
+
+<use Sections/Figures/stereo_anaglyph.png>
+Package pdftex.def Info: Sections/Figures/stereo_anaglyph.png used on input lin
+e 26.
+(pdftex.def)             Requested size: 238.49121pt x 181.46942pt.
+
+Overfull \hbox (1.35527pt too wide) in paragraph at lines 26--27
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+<Sections/Figures/example_stairs_pointcloud.jpg, id=10, 1405.25pt x 1053.9375pt
+>
+File: Sections/Figures/example_stairs_pointcloud.jpg Graphic file (type jpg)
+ <use Sections/Figures/example_stairs_pointcloud.jpg>
+Package pdftex.def Info: Sections/Figures/example_stairs_pointcloud.jpg used on
+ input line 35.
+(pdftex.def)             Requested size: 238.49121pt x 178.86145pt.
+
+Overfull \hbox (1.35527pt too wide) in paragraph at lines 35--36
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+<Sections/Figures/good_contour_plot_12-7.png, id=13, 1053.9375pt x 790.45313pt>
+File: Sections/Figures/good_contour_plot_12-7.png Graphic file (type png)
+<use Sections/Figures/good_contour_plot_12-7.png>
+Package pdftex.def Info: Sections/Figures/good_contour_plot_12-7.png used on in
+put line 44.
+(pdftex.def)             Requested size: 238.49121pt x 178.86949pt.
+
+Overfull \hbox (1.35527pt too wide) in paragraph at lines 44--45
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Sections/Figures/polytope_example.png, id=16, 1053.9375pt x 790.45313pt>
+File: Sections/Figures/polytope_example.png Graphic file (type png)
+
+<use Sections/Figures/polytope_example.png>
+Package pdftex.def Info: Sections/Figures/polytope_example.png used on input li
+ne 51.
+(pdftex.def)             Requested size: 238.49121pt x 178.86949pt.
+
+Overfull \hbox (1.35527pt too wide) in paragraph at lines 51--52
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Sections/Figures/polytope_sideview.png, id=19, 1053.9375pt x 790.45313pt>
+File: Sections/Figures/polytope_sideview.png Graphic file (type png)
+
+<use Sections/Figures/polytope_sideview.png>
+Package pdftex.def Info: Sections/Figures/polytope_sideview.png used on input l
+ine 58.
+(pdftex.def)             Requested size: 238.49121pt x 178.86949pt.
+
+Overfull \hbox (1.35527pt too wide) in paragraph at lines 58--59
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+)
+(/home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Repo
+rt/Sections/Results.tex
+<Figures/BlockDiagram.pdf, id=23, 862.22125pt x 302.12875pt>
+File: Figures/BlockDiagram.pdf Graphic file (type pdf)
+
+<use Figures/BlockDiagram.pdf>
+Package pdftex.def Info: Figures/BlockDiagram.pdf used on input line 9.
+(pdftex.def)             Requested size: 237.13594pt x 83.09258pt.
  [4321{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 66.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+! Undefined control sequence.
+l.15 ...in the 3D camera frame, ${}^\mathcal{C}\bm
+                                                  {p}_o$, and apply the foll...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.17 {}^\mathcal{I}\bm
+                      {p}_o = {}^\mathcal{I}\bm{H}_\mathcal{C}{}^\mathcal{C}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.17 {}^\mathcal{I}\bm{p}_o = {}^\mathcal{I}\bm
+                                               {H}_\mathcal{C}{}^\mathcal{C}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.17 ...hcal{I}\bm{H}_\mathcal{C}{}^\mathcal{C}\bm
+                                                  {p}_o
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.19 where ${}^\mathcal{I}\bm
+                             {H}_\mathcal{C}$ is the homogeneous transformat...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+<Figures/RobotStairsRelation.pdf, id=44, 611.28375pt x 380.42125pt>
+File: Figures/RobotStairsRelation.pdf Graphic file (type pdf)
+
+<use Figures/RobotStairsRelation.pdf>
+Package pdftex.def Info: Figures/RobotStairsRelation.pdf used on input line 22.
+
+(pdftex.def)             Requested size: 237.13594pt x 147.57423pt.
+ [4322 </home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVisi
+on/Report/Sections/Figures/Final-Project-Pipeline.png> </home/gbledt/MIT/Fall 2
+017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/exam
+ple_stereo_pair.jpg> </home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITChe
+etahStereoVision/Report/Sections/Figures/stereo_anaglyph.png (PNG copy)> </home
+/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sec
+tions/Figures/example_stairs_pointcloud.jpg> </home/gbledt/MIT/Fall 2017/6.869 
+- Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/good_contour_p
+lot_12-7.png (PNG copy)>]
+! Undefined control sequence.
+l.28 ({}^\Psi\bm
+                {p}_{CoM,x} - {}^\Psi\bm{p}_{0,x}) < (d - d_{buffer})
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.28 ({}^\Psi\bm{p}_{CoM,x} - {}^\Psi\bm
+                                        {p}_{0,x}) < (d - d_{buffer})
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.30 where ${}^\Psi\bm
+                      {p}_{CoM,x}$ is the yaw rotated CoM position ignoring ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.30 ...noring pitch and roll effects, ${}^\Psi\bm
+                                                  {p}_{0,x}$ is the yaw rota...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+<Figures/RobotStairs.pdf, id=61, 455.7025pt x 415.5525pt>
+File: Figures/RobotStairs.pdf Graphic file (type pdf)
+
+<use Figures/RobotStairs.pdf>
+Package pdftex.def Info: Figures/RobotStairs.pdf used on input line 38.
+(pdftex.def)             Requested size: 201.56699pt x 183.80746pt.
+)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+(/home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Repo
+rt/Sections/Conclusion.tex [4323 </home/gbledt/MIT/Fall 2017/6.869 - Computer V
+ision/MITCheetahStereoVision/Report/Sections/Figures/polytope_example.png (PNG 
+copy)> </home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVisi
+on/Report/Sections/Figures/polytope_sideview.png (PNG copy)> </home/gbledt/MIT/
+Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Figures/BlockDi
+agram.pdf> </home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereo
+Vision/Report/Figures/RobotStairsRelation.pdf
+
+pdfTeX warning: pdflatex (file /home/gbledt/MIT/Fall 2017/6.869 - Computer Visi
+on/MITCheetahStereoVision/Report/Figures/RobotStairsRelation.pdf): PDF inclusio
+n: multiple pdfs with page group included in a single page
+>])
+Underfull \hbox (badness 4556) in paragraph at lines 66--75
+\OT1/ptm/m/n/10 tech-ni-cal cor-rect-ness) (20Con-clu-sion (6.667Ref-er-ences
+ []
+
+
+(/home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Repo
+rt/egpaper_final.bbl)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 82.
+ [4324 </home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVisi
+on/Report/Figures/RobotStairs.pdf>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 82.
 
 (/home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Repo
 rt/egpaper_final.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 66.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 66.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 66.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 82.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 82.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 82.
  ) 
 Here is how much of TeX's memory you used:
- 6258 strings out of 493029
- 91376 string characters out of 6136234
- 178536 words of memory out of 5000000
- 9697 multiletter control sequences out of 15000+600000
- 22096 words of font info for 52 fonts, out of 8000000 for 9000
+ 6372 strings out of 493029
+ 94647 string characters out of 6136234
+ 185116 words of memory out of 5000000
+ 9758 multiletter control sequences out of 15000+600000
+ 26544 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,9n,26p,1150b,322s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,9n,26p,1150b,336s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
-/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.
-pfb>
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr
+8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/urw/times/utmri8a.pfb>
 Output written on "/home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheeta
-hStereoVision/Report/egpaper_final.pdf" (1 page, 53262 bytes).
+hStereoVision/Report/egpaper_final.pdf" (4 pages, 1285328 bytes).
 PDF statistics:
- 34 PDF objects out of 1000 (max. 8388607)
- 26 compressed objects within 1 object stream
- 5 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 143 PDF objects out of 1000 (max. 8388607)
+ 103 compressed objects within 2 object streams
+ 27 named destinations out of 1000 (max. 500000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
