@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.25)  12 DEC 2017 15:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.25)  12 DEC 2017 16:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -284,7 +284,29 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 \Hy@SectionHShift=\skip48
 )
 (/home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Repo
-rt/egpaper_final.aux)
+rt/egpaper_final.aux
+
+LaTeX Warning: Label `simmons-pair' multiply defined.
+
+
+LaTeX Warning: Label `simmons-depthmap' multiply defined.
+
+
+LaTeX Warning: Label `simmons-ptcloud' multiply defined.
+
+
+LaTeX Warning: Label `simmons-polytope' multiply defined.
+
+
+LaTeX Warning: Label `fig:BD' multiply defined.
+
+
+LaTeX Warning: Label `fig:RSR' multiply defined.
+
+
+LaTeX Warning: Label `fig:RS' multiply defined.
+
+)
 \openout1 = `egpaper_final.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
@@ -304,7 +326,8 @@ LaTeX Font Info:    ... okay on input line 30.
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 30.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
-) ABD: EveryShipout initializing macros
+)
+ABD: EveryShipout initializing macros
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2016/01/03 v1.1b Standard LaTeX Color (DPC)
 
@@ -709,7 +732,7 @@ etahStereoVision/Report/Sections/Figures/simmons-stairs-ptcloud.jpg> </home/gbl
 edt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Section
 s/Figures/simmons-stairs-diagonal-geom.jpg> </home/gbledt/MIT/Fall 2017/6.869 -
  Computer Vision/MITCheetahStereoVision/Report/Figures/BlockDiagram.pdf>]
-<Figures/RobotStairs.pdf, id=150, 455.7025pt x 415.5525pt>
+<Figures/RobotStairs.pdf, id=152, 455.7025pt x 415.5525pt>
 File: Figures/RobotStairs.pdf Graphic file (type pdf)
 
 <use Figures/RobotStairs.pdf>
@@ -723,9 +746,49 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 (/home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Repo
 rt/Sections/Conclusion.tex)
 (/home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Repo
-rt/egpaper_final.bbl
-Underfull \vbox (badness 1590) has occurred while \output is active []
+rt/Sections/IndividualContribution.tex
+File: Sections/Figures/simmons-stereo-pair.jpg Graphic file (type jpg)
 
+<use Sections/Figures/simmons-stereo-pair.jpg>
+Package pdftex.def Info: Sections/Figures/simmons-stereo-pair.jpg used on input
+ line 11.
+(pdftex.def)             Requested size: 237.13594pt x 100.87563pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: Sections/Figures/simmons-stairs-depthmap.jpg Graphic file (type jpg)
+<use Sections/Figures/simmons-stairs-depthmap.jpg>
+Package pdftex.def Info: Sections/Figures/simmons-stairs-depthmap.jpg used on i
+nput line 18.
+(pdftex.def)             Requested size: 144.54pt x 108.93916pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: Sections/Figures/simmons-stairs-ptcloud.jpg Graphic file (type jpg)
+<use Sections/Figures/simmons-stairs-ptcloud.jpg>
+Package pdftex.def Info: Sections/Figures/simmons-stairs-ptcloud.jpg used on in
+put line 25.
+(pdftex.def)             Requested size: 237.13594pt x 202.26578pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: Sections/Figures/simmons-stairs-diagonal-geom.jpg Graphic file (type jpg)
+
+<use Sections/Figures/simmons-stairs-diagonal-geom.jpg>
+Package pdftex.def Info: Sections/Figures/simmons-stairs-diagonal-geom.jpg used
+ on input line 32.
+(pdftex.def)             Requested size: 237.13594pt x 180.59384pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: Figures/BlockDiagram.pdf Graphic file (type pdf)
+<use Figures/BlockDiagram.pdf>
+Package pdftex.def Info: Figures/BlockDiagram.pdf used on input line 42.
+(pdftex.def)             Requested size: 237.13594pt x 83.09258pt.
  [4326 </home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVisi
 on/Report/Figures/RobotStairsRelation.pdf> </home/gbledt/MIT/Fall 2017/6.869 - 
 Computer Vision/MITCheetahStereoVision/Report/Figures/RobotStairs.pdf
@@ -733,31 +796,134 @@ Computer Vision/MITCheetahStereoVision/Report/Figures/RobotStairs.pdf
 pdfTeX warning: pdflatex (file /home/gbledt/MIT/Fall 2017/6.869 - Computer Visi
 on/MITCheetahStereoVision/Report/Figures/RobotStairs.pdf): PDF inclusion: multi
 ple pdfs with page group included in a single page
->])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 77.
- [4327
+>]
+! Undefined control sequence.
+l.47 ...in the 3D camera frame, ${}^\mathcal{C}\bm
+                                                  {p}_o$, and apply the foll...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 77.
+! Undefined control sequence.
+l.50 {}^\mathcal{I}\bm
+                      {p}_o = {}^\mathcal{I}\bm{H}_\mathcal{C}{}^\mathcal{C}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.50 {}^\mathcal{I}\bm{p}_o = {}^\mathcal{I}\bm
+                                               {H}_\mathcal{C}{}^\mathcal{C}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.50 ...hcal{I}\bm{H}_\mathcal{C}{}^\mathcal{C}\bm
+                                                  {p}_o
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.53 where ${}^\mathcal{I}\bm
+                             {H}_\mathcal{C}$ is the homogeneous transformat...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+File: Figures/RobotStairsRelation.pdf Graphic file (type pdf)
+<use Figures/RobotStairsRelation.pdf>
+Package pdftex.def Info: Figures/RobotStairsRelation.pdf used on input line 56.
+
+(pdftex.def)             Requested size: 237.13594pt x 147.57423pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[4327]
+! Undefined control sequence.
+l.62 ({}^\Psi\bm
+                {p}_{CoM,x} - {}^\Psi\bm{p}_{0,x}) < (d - d_{buffer})
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.62 ({}^\Psi\bm{p}_{CoM,x} - {}^\Psi\bm
+                                        {p}_{0,x}) < (d - d_{buffer})
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.64 where ${}^\Psi\bm
+                      {p}_{CoM,x}$ is the yaw rotated CoM position ignoring ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.64 ...noring pitch and roll effects, ${}^\Psi\bm
+                                                  {p}_{0,x}$ is the yaw rota...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+File: Figures/RobotStairs.pdf Graphic file (type pdf)
+<use Figures/RobotStairs.pdf>
+Package pdftex.def Info: Figures/RobotStairs.pdf used on input line 72.
+(pdftex.def)             Requested size: 201.56699pt x 183.80746pt.
+)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+(/home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Repo
+rt/egpaper_final.bbl)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 79.
+ [4328]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 79.
 
 (/home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Repo
 rt/egpaper_final.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 77.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 77.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 79.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 79.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 77.
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 79.
  ) 
 Here is how much of TeX's memory you used:
- 6470 strings out of 493029
- 97171 string characters out of 6136234
- 185065 words of memory out of 5000000
+ 6486 strings out of 493029
+ 97558 string characters out of 6136234
+ 186104 words of memory out of 5000000
  9820 multiletter control sequences out of 15000+600000
  29161 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,9n,26p,1201b,470s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,9n,26p,1201b,336s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
@@ -773,10 +939,10 @@ s/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/tim
 es/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
 
 Output written on "/home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheeta
-hStereoVision/Report/egpaper_final.pdf" (7 pages, 3169410 bytes).
+hStereoVision/Report/egpaper_final.pdf" (8 pages, 3174995 bytes).
 PDF statistics:
- 235 PDF objects out of 1000 (max. 8388607)
- 173 compressed objects within 2 object streams
- 44 named destinations out of 1000 (max. 500000)
+ 262 PDF objects out of 1000 (max. 8388607)
+ 197 compressed objects within 2 object streams
+ 57 named destinations out of 1000 (max. 500000)
  86 words of extra memory for PDF output out of 10000 (max. 10000000)
 
