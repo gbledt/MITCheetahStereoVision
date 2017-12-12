@@ -1,7 +1,7 @@
 %!TEX root = ../egpaper_final.tex
 \section{Approach}
 
-Our pipeline is summarized in Figure \ref{overview-diagram}. We begin with a pair of RGB stereo images. From this image pair and calibration parameters obtained offline, we apply a stereo matching algorithm (See Section \ref{stereo-matching-section} to get a depthmap of the scene. Using camera instrinsic parameters, we can project this depthmap into 3D space and obtain a point cloud of the environment (See Section \ref{pointcloud-section}. Using two different methods described in Section \ref{plane-section}, we show how this point cloud can be decomposed into a set of planes. Finally, we use this set of planes to construct a polytope. The robot can then use this geometric representation of the terrain to plan its foot trajectory.
+Our pipeline is summarized in Figure \ref{overview-diagram}. We begin with a pair of RGB stereo images. From this image pair and calibration parameters obtained offline, we apply a stereo matching algorithm (See Section \ref{stereo-matching-section} to get a depthmap of the scene. Using camera instrinsic parameters, we can project this depthmap into 3D space and obtain a point cloud of the environment (See Section \ref{pointcloud-section}). Using two different methods described in Section \ref{plane-section}, we decompose this point coud into a set of planes. Finally, we reconstruct a polytope from these planes. A robot can use this geometric representation of the terrain to plan its foot trajectory.
 
 
 \begin{figure}[!h]
@@ -16,7 +16,7 @@ Our pipeline is summarized in Figure \ref{overview-diagram}. We begin with a pai
 \begin{figure}[!h]
 \centering
 \includegraphics[width=3.3in]{Sections/Figures/example_stereo_pair.jpg}
-\caption{An example stereo image pair taken by our camera setup. The two cameras are parallel and have a baseline of approximately 8cm.}
+\caption{Am image pair taken by our stereo camera setup. The two cameras are parallel and have a baseline of approximately 8cm.}
 \label{stereo-image-pair}
 \end{figure}
 
@@ -32,23 +32,25 @@ Our pipeline is summarized in Figure \ref{overview-diagram}. We begin with a pai
 \begin{figure}[!h]
 \centering
 \includegraphics[width=3.3in]{Sections/Figures/example_stairs_pointcloud.jpg}
-\caption{A pointcloud representation of the set of stairs in Figure \ref{stereo-image-pair}.}
+\caption{A pointcloud representation of the stairs in Figure \ref{stereo-image-pair}.}
 \label{pointcloud-example}
 \end{figure}
 
 \subsection{Planar Decomposition of Point Clouds} \label{plane-section}
 
-In order to estimate a polytope representation of an obstacle, we must first decompose its point cloud into a set of planes. We demonstrate two approaches for finding planes in a raw point cloud. 
+In order to estimate a polytope representation of an obstacle, decompose its point cloud into a set of planes. We demonstrate two main approaches for finding planar surfaces of an obstacle. We describe the Contour Method in Section \ref{contour-method} and the Orientation Method in \ref{orient-method}.
 
-In the first approach \ref{contour-method}, we find large contours in the original RGB image and project these contours into the point cloud to find subsets points that are likely to be coplanar. In the second approach \ref{orient-method}, we make the assumption that planes are either horizontal or vertical, and search for planes in the raw point cloud who are close to these orientations and are supported by many inliers. In both approaches, MSAC (M-Estimator SAmple Consensus \cite{msac-article}) is the algorithm used for plane estimation.
+In both approaches, MSAC (M-Estimator SAmple Consensus \cite{msac-article}) is the algorithm used for plane estimation. In \cite{msac-article}, Zisserman et. al. show that MSAC is more robust than RANSAC for estimating geometric relationships in point cloud data, at no additional computational cost.
 
 \subsubsection{Contour Method} \label{contour-method}
 
-We find contours in the original RGB image using MATLAB's built in \textit{imcontour} function. Internally, this function uses the Theo Pavlidis algorithm \cite{pavlidis} to look for contours in the image at multiple levels.
+As the name of this approach suggests, we detect large contours in the original RGB image and project these contours into the point cloud to find subsets points that are likely to be coplanar.
 
-Contours are then sorted by area, and pairs of contours with Intersection-over-Union (IoU) above a threshold of 0.3 are replaced by the larger of the two contours. Highly overlapping contours are likely to lie on the same plane, and we observed empirically that our reconstruction performs better when there are no duplicate planes.
+We use MATLAB's \textit{imcontour} function from the Computer Vision Toolkit to efficiently find contours. Internally, this function uses the Theo Pavlidis algorithm \cite{pavlidis} to find contours at a variable number of levels.
 
-We then project our candidate contours into the point cloud, and find 3D points that originally from inside of this contour in the RGB image. A plane is fit to each planar subset of the point cloud using MSAC with no reference normals.
+Contours are then sorted by area, and pairs of contours with Intersection-over-Union (IoU) above a threshold of 0.3 are replaced by the larger of the two contours. Highly overlapping contours are likely to lie on the same plane, and we observe empirically that our reconstruction performs better when there are no duplicate planes.
+
+We then project our candidate contours into the point cloud, and find 3D points that originally from inside of this contour in the RGB image. A plane is fit to each planar subset of the point cloud using MSAC.
 
 \begin{figure}[!h]
 \centering
@@ -59,9 +61,11 @@ We then project our candidate contours into the point cloud, and find 3D points 
 
 \subsubsection{Orientation Method} \label{orient-method}
 
-The Contour Method, as one might expect, is highly sensitive to lighting effects and the sharpness of edges on the obstacle. In order to provide robustness to lighting conditions and the visual characteristics of the obstacle, we propose an orientation method for plane fitting that does not depend on contours.
+The Contour Method, as one might expect, is highly sensitive to lighting effects and the sharpness of edges on the obstacle. In this section, we propose a second method that relies on \textit{au priori} knowledge of plane orientation to remove our dependence on image contours.
 
-In this method, we assume that the obstacle is composed of a predetermined number of horizontal and vertical planes in the world frame. During MSAC, we sample three points from the point cloud and compute the parameters of a plane with them. We require that the normal of this plane is within an angular tolerance of a reference normal vector (i.e the z-axis for vertical planes and the y-axis for horizontal planes). If the robot frame is not aligned with the world frame, we can rotate our reference normals before performing this step. Ultimately, MSAC finds a plane that is very close to horizontal or vertical, and has the lowest cost based on inliers and outliers. We then remove the inlier points from the point cloud, and iteratively fit horizontal and vertical planes to the residual point cloud. Although our algorithm currently looks for a fixed number of planes, it would be simple to add a condition that stops extracting planes once there are insufficient supporting inliers.
+In this method, we assume that the obstacle is composed of a predetermined number of planes that are either horizontal and vertical relative to the world frame. While performing MSAC, we sample three points from the point cloud and compute the parameters of a plane with them. We require that the normal of this plane is within an angular tolerance of a reference normal vector (i.e the z-axis for vertical planes and the y-axis for horizontal planes). If the robot frame is not aligned with the world frame, we can rotate our reference normals before performing MSAC. After performing a fixed number of iterations, MSAC selects a horizontal or vertical plane with the lowest cost. We then remove the inlier points from the point cloud, and iteratively fit horizontal and vertical planes to the residual point cloud.
+
+Although our algorithm currently looks for a fixed number of planes, it would be straightforward to add a condition that stops extracting planes once the residual point cloud is too small, or the cost of MSAC planes is above a threshold.
 
 \subsection{Polytope Reconstruction from Unordered Planes} \label{polytope-section}
 
@@ -83,7 +87,8 @@ When using the Contour Method in Section \ref{contour-method}, we assume that th
 \label{polytope-sideview-contour}
 \end{figure}
 
-When using the Orientation Method in Section \ref{orient-method}, we use a sampling based approach to order planes. We sort all vertical planes based on their distance from the camera, then find the horizontal plane that is ``active'' between each pair of vertical planes. The ``active'' horizontal plane is the one that has the smallest average distance to a sample of points in the region between the vertical planes.
+When using the Orientation Method in Section \ref{orient-method}, we use a sampling based approach to order planes. First, we sort all vertical planes based on their distance from the camera, then find the horizontal plane that is ``active'' between each pair of vertical planes. The ``active'' horizontal plane is the one that has the smallest average distance to a sample of points in the region between the vertical planes.
+
 
 \begin{figure}[!h]
 \centering
