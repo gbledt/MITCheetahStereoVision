@@ -39,6 +39,9 @@ Our pipeline is summarized in Figure \ref{overview-diagram}. We begin with a pai
 
 \subsection{Polytope Estimation of Objects}
 
+In order to estimate a polytope representation of an obstacle, we must first decompose its point cloud into a set of planes.
+We demonstrate two approaches for finding planes in a raw point cloud. In the first approach, we find large contours in the original RGB image and use these contours to find subsets of the point cloud that are likely to be coplanar. In the second approach, we make the assumption that planes are either horizontal or vertical, and search for planes in the raw point cloud who are close to these orientations and are supported by many inliers. In both approaches, MSAC (M-Estimator SAmple Consensus) is the algorithm used for plane estimation.
+
 \begin{figure}[!h]
 \centering
 \includegraphics[width=3.3in]{Sections/Figures/good_contour_plot_12-7.png}
