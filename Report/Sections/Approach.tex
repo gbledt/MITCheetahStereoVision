@@ -37,10 +37,36 @@ Our pipeline is summarized in Figure \ref{overview-diagram}. We begin with a pai
 \label{pointcloud-example}
 \end{figure}
 
-\subsection{Polytope Estimation of Objects}
+\subsection{Planar Decomposition of Point Clouds}
 
 In order to estimate a polytope representation of an obstacle, we must first decompose its point cloud into a set of planes.
-We demonstrate two approaches for finding planes in a raw point cloud. In the first approach, we find large contours in the original RGB image and use these contours to find subsets of the point cloud that are likely to be coplanar. In the second approach, we make the assumption that planes are either horizontal or vertical, and search for planes in the raw point cloud who are close to these orientations and are supported by many inliers. In both approaches, MSAC (M-Estimator SAmple Consensus) is the algorithm used for plane estimation.
+We demonstrate two approaches for finding planes in a raw point cloud. 
+
+In the first approach \ref{contour-method}, we find large contours in the original RGB image and project these contours into the point cloud to find subsets points that are likely to be coplanar. In the second approach \ref{orient-method}, we make the assumption that planes are either horizontal or vertical, and search for planes in the raw point cloud who are close to these orientations and are supported by many inliers. In both approaches, MSAC (M-Estimator SAmple Consensus \cite{msac-article}) is the algorithm used for plane estimation.
+
+\subsubsection{Contour Method} \label{contour-method}
+
+We find contours in the original RGB image using MATLAB's built in \textit{imcontour} function. Internally, this function uses the Theo Pavlidis algorithm [TODO] to look for contours in the image at multiple levels.
+
+Contours are then sorted by area, and pairs of contours with IoU above a threshold of 0.3 are replaced by the larger of the two contours. Highly overlapping contours are likely to lie on the same plane, and we observed empirically that our reconstruction performs better when there are no duplicate planes.
+
+We then project our candidate contours into the point cloud, and find 3D points that originally from inside of this contour in the RGB image. A plane is fit to each planar subset of the point cloud using MSAC with no reference normals.
+
+\subsubsection{Orientation Method} \label{orient-method}
+
+The contouring method \ref{contour-method}, as one might expect, is highly sensitive to lighting effects and the sharpness of edges on the obstacle. In order to provide robustness to lighting and the visual characteristics of the obstacle, we propose an orientation method for plane fitting that does not depend on contours.
+
+In this method, we assume that the obstacle is composed of a predetermined number of horizontal and vertical planes. During MSAC, we sample three points from the point cloud and compute the parameters of a plane with them. We require that the normal of this plane is within an angular tolerance of a reference normal vector (i.e the z-axis for vertical planes). Ultimately, MSAC finds a plane that is very close to horizontal or vertical, and has the lowest cost based on inliers and outliers. We then remove the inlier points from the point cloud, and iteratively fit horizontal and vertical planes to the residual point cloud.
+
+\subsection{Polytope Reconstruction from Unordered Planes}
+
+At this stage in the pipeline, we have an unordered set of planes, each represent by a surface normal and offset constant. There are many ways that these planes could intersect to form a polytope, but only one that actually matches our ground truth observation. We must make another assumption here about the composition of the polytope.
+
+When using the Contour Method \ref{contour-method}, we assume that the depth and height ordering of planes in 3D space is given by the vertical ordering of planes in the RGB image. Horizontal planes that appear higher in the RGB image are also higher in the scene. Similarly, vertical planes that appear higher in the RGB image are deeper in the scene.
+
+When using the Orientation Method \ref{orient-method}, we use a sampling based approach to order planes. We sort all vertical planes based on their distance from the camera, then find the horizontal plane that is ``active'' between each pair of vertical planes. The ``active'' horizontal plane is the one that has the smallest average distance to a sample of points in the region between the vertical planes.
+
+Finally, once an ordering of planes has been established, we can compute lines of intersection between these planes, and obtain a set of vertices for the polytope.
 
 \begin{figure}[!h]
 \centering
