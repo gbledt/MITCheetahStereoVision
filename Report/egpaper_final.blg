@@ -3,55 +3,55 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: egpaper_final.aux
 The style file: ieee.bst
 Database file #1: egbib.bib
-I was expecting a `,' or a `}'---line 50 of file egbib.bib
+I was expecting a `,' or a `}'---line 52 of file egbib.bib
  :     
  :     title={MLESAC: A New Robust Estimator with Application to Estimating Image Geometry},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 57 of file egbib.bib
+I was expecting a `,' or a `}'---line 59 of file egbib.bib
  :     
  :     title={Plane Detection in Point Cloud Data},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You've used 1 entry,
+You've used 2 entries,
             2120 wiz_defined-function locations,
-            504 strings with 3949 characters,
-and the built_in function-call counts, 502 in all, are:
-= -- 49
-> -- 7
+            510 strings with 4190 characters,
+and the built_in function-call counts, 804 in all, are:
+= -- 76
+> -- 30
 < -- 2
-+ -- 3
-- -- 2
-* -- 34
-:= -- 71
-add.period$ -- 3
-call.type$ -- 1
-change.case$ -- 4
++ -- 12
+- -- 10
+* -- 55
+:= -- 128
+add.period$ -- 6
+call.type$ -- 2
+change.case$ -- 11
 chr.to.int$ -- 0
-cite$ -- 1
-duplicate$ -- 23
-empty$ -- 49
-format.name$ -- 2
-if$ -- 116
+cite$ -- 2
+duplicate$ -- 33
+empty$ -- 66
+format.name$ -- 10
+if$ -- 174
 int.to.chr$ -- 0
-int.to.str$ -- 1
-missing$ -- 1
-newline$ -- 8
-num.names$ -- 2
-pop$ -- 6
+int.to.str$ -- 2
+missing$ -- 2
+newline$ -- 13
+num.names$ -- 4
+pop$ -- 13
 preamble$ -- 1
-purify$ -- 3
+purify$ -- 9
 quote$ -- 0
-skip$ -- 21
+skip$ -- 28
 stack$ -- 0
-substring$ -- 54
-swap$ -- 12
+substring$ -- 59
+swap$ -- 13
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 4
+type$ -- 8
 warning$ -- 0
-while$ -- 4
-width$ -- 2
-write$ -- 14
+while$ -- 6
+width$ -- 3
+write$ -- 24
 (There were 2 error messages)
