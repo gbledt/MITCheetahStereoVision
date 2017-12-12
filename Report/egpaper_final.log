@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.25)  12 DEC 2017 00:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.25)  12 DEC 2017 00:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -374,23 +374,31 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 50.
 
 (/home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Repo
-rt/Sections/Introduction.tex)
+rt/Sections/Introduction.tex
+<Figures/RobotIntro.pdf, id=6, 1211.52625pt x 636.3775pt>
+File: Figures/RobotIntro.pdf Graphic file (type pdf)
+
+<use Figures/RobotIntro.pdf>
+Package pdftex.def Info: Figures/RobotIntro.pdf used on input line 11.
+(pdftex.def)             Requested size: 237.13594pt x 124.55435pt.
+)
 (/home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Repo
 rt/Sections/Related-Work.tex)
 (/home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Repo
-rt/Sections/Approach.tex
-<Sections/Figures/Final-Project-Pipeline.png, id=6, 362.35374pt x 422.57875pt>
-File: Sections/Figures/Final-Project-Pipeline.png Graphic file (type png)
+rt/Sections/Approach.tex [4321{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.ma
+p}
 
+
+ </home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Rep
+ort/Figures/RobotIntro.pdf>]
+<Sections/Figures/Final-Project-Pipeline.png, id=33, 362.35374pt x 422.57875pt>
+File: Sections/Figures/Final-Project-Pipeline.png Graphic file (type png)
 <use Sections/Figures/Final-Project-Pipeline.png>
 Package pdftex.def Info: Sections/Figures/Final-Project-Pipeline.png used on in
 put line 10.
 (pdftex.def)             Requested size: 144.54pt x 168.56424pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<Sections/Figures/example_stereo_pair.jpg, id=8, 1407.2575pt x 679.53876pt>
+<Sections/Figures/example_stereo_pair.jpg, id=35, 1407.2575pt x 679.53876pt>
 File: Sections/Figures/example_stereo_pair.jpg Graphic file (type jpg)
 
 <use Sections/Figures/example_stereo_pair.jpg>
@@ -402,10 +410,7 @@ Overfull \hbox (1.35527pt too wide) in paragraph at lines 19--20
  [][] 
  []
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<Sections/Figures/stereo_anaglyph.png, id=9, 673.76718pt x 512.66531pt>
+<Sections/Figures/stereo_anaglyph.png, id=36, 673.76718pt x 512.66531pt>
 File: Sections/Figures/stereo_anaglyph.png Graphic file (type png)
 
 <use Sections/Figures/stereo_anaglyph.png>
@@ -421,7 +426,7 @@ Overfull \hbox (1.35527pt too wide) in paragraph at lines 26--27
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<Sections/Figures/example_stairs_pointcloud.jpg, id=10, 1405.25pt x 1053.9375pt
+<Sections/Figures/example_stairs_pointcloud.jpg, id=37, 1405.25pt x 1053.9375pt
 >
 File: Sections/Figures/example_stairs_pointcloud.jpg Graphic file (type jpg)
  <use Sections/Figures/example_stairs_pointcloud.jpg>
@@ -437,7 +442,7 @@ Overfull \hbox (1.35527pt too wide) in paragraph at lines 35--36
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<Sections/Figures/good_contour_plot_12-7.png, id=13, 1053.9375pt x 790.45313pt>
+<Sections/Figures/good_contour_plot_12-7.png, id=40, 1053.9375pt x 790.45313pt>
 File: Sections/Figures/good_contour_plot_12-7.png Graphic file (type png)
 <use Sections/Figures/good_contour_plot_12-7.png>
 Package pdftex.def Info: Sections/Figures/good_contour_plot_12-7.png used on in
@@ -451,7 +456,7 @@ Overfull \hbox (1.35527pt too wide) in paragraph at lines 44--45
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Sections/Figures/polytope_example.png, id=16, 1053.9375pt x 790.45313pt>
+<Sections/Figures/polytope_example.png, id=43, 1053.9375pt x 790.45313pt>
 File: Sections/Figures/polytope_example.png Graphic file (type png)
 
 <use Sections/Figures/polytope_example.png>
@@ -466,7 +471,7 @@ Overfull \hbox (1.35527pt too wide) in paragraph at lines 51--52
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Sections/Figures/polytope_sideview.png, id=19, 1053.9375pt x 790.45313pt>
+<Sections/Figures/polytope_sideview.png, id=46, 1053.9375pt x 790.45313pt>
 File: Sections/Figures/polytope_sideview.png Graphic file (type png)
 
 <use Sections/Figures/polytope_sideview.png>
@@ -484,16 +489,13 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 )
 (/home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Repo
 rt/Sections/Results.tex
-<Figures/BlockDiagram.pdf, id=23, 862.22125pt x 302.12875pt>
+<Figures/BlockDiagram.pdf, id=50, 862.22125pt x 302.12875pt>
 File: Figures/BlockDiagram.pdf Graphic file (type pdf)
 
 <use Figures/BlockDiagram.pdf>
 Package pdftex.def Info: Figures/BlockDiagram.pdf used on input line 9.
 (pdftex.def)             Requested size: 237.13594pt x 83.09258pt.
- [4321{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
-
-]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -542,7 +544,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<Figures/RobotStairsRelation.pdf, id=44, 611.28375pt x 380.42125pt>
+<Figures/RobotStairsRelation.pdf, id=52, 611.28375pt x 380.42125pt>
 File: Figures/RobotStairsRelation.pdf Graphic file (type pdf)
 
 <use Figures/RobotStairsRelation.pdf>
@@ -555,9 +557,10 @@ on/Report/Sections/Figures/Final-Project-Pipeline.png> </home/gbledt/MIT/Fall 2
 ple_stereo_pair.jpg> </home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITChe
 etahStereoVision/Report/Sections/Figures/stereo_anaglyph.png (PNG copy)> </home
 /gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sec
-tions/Figures/example_stairs_pointcloud.jpg> </home/gbledt/MIT/Fall 2017/6.869 
-- Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/good_contour_p
-lot_12-7.png (PNG copy)>]
+tions/Figures/example_stairs_pointcloud.jpg>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 ! Undefined control sequence.
 l.28 ({}^\Psi\bm
                 {p}_{CoM,x} - {}^\Psi\bm{p}_{0,x}) < (d - d_{buffer})
@@ -594,30 +597,27 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<Figures/RobotStairs.pdf, id=61, 455.7025pt x 415.5525pt>
+[4323 </home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVisio
+n/Report/Sections/Figures/good_contour_plot_12-7.png (PNG copy)> </home/gbledt/
+MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Fi
+gures/polytope_example.png (PNG copy)> </home/gbledt/MIT/Fall 2017/6.869 - Comp
+uter Vision/MITCheetahStereoVision/Report/Sections/Figures/polytope_sideview.pn
+g (PNG copy)> </home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahSte
+reoVision/Report/Figures/BlockDiagram.pdf> </home/gbledt/MIT/Fall 2017/6.869 - 
+Computer Vision/MITCheetahStereoVision/Report/Figures/RobotStairsRelation.pdf
+
+pdfTeX warning: pdflatex (file /home/gbledt/MIT/Fall 2017/6.869 - Computer Visi
+on/MITCheetahStereoVision/Report/Figures/RobotStairsRelation.pdf): PDF inclusio
+n: multiple pdfs with page group included in a single page
+>] <Figures/RobotStairs.pdf, id=96, 455.7025pt x 415.5525pt>
 File: Figures/RobotStairs.pdf Graphic file (type pdf)
 
 <use Figures/RobotStairs.pdf>
 Package pdftex.def Info: Figures/RobotStairs.pdf used on input line 38.
 (pdftex.def)             Requested size: 201.56699pt x 183.80746pt.
 )
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
 (/home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Repo
-rt/Sections/Conclusion.tex [4323 </home/gbledt/MIT/Fall 2017/6.869 - Computer V
-ision/MITCheetahStereoVision/Report/Sections/Figures/polytope_example.png (PNG 
-copy)> </home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVisi
-on/Report/Sections/Figures/polytope_sideview.png (PNG copy)> </home/gbledt/MIT/
-Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Figures/BlockDi
-agram.pdf> </home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereo
-Vision/Report/Figures/RobotStairsRelation.pdf
-
-pdfTeX warning: pdflatex (file /home/gbledt/MIT/Fall 2017/6.869 - Computer Visi
-on/MITCheetahStereoVision/Report/Figures/RobotStairsRelation.pdf): PDF inclusio
-n: multiple pdfs with page group included in a single page
->])
+rt/Sections/Conclusion.tex)
 Underfull \hbox (badness 4556) in paragraph at lines 66--75
 \OT1/ptm/m/n/10 tech-ni-cal cor-rect-ness) (20Con-clu-sion (6.667Ref-er-ences
  []
@@ -637,13 +637,13 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 82.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 82.
  ) 
 Here is how much of TeX's memory you used:
- 6372 strings out of 493029
- 94647 string characters out of 6136234
- 185116 words of memory out of 5000000
- 9758 multiletter control sequences out of 15000+600000
+ 6381 strings out of 493029
+ 94810 string characters out of 6136234
+ 182417 words of memory out of 5000000
+ 9764 multiletter control sequences out of 15000+600000
  26544 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,9n,26p,1150b,336s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,9n,26p,1201b,336s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/
@@ -656,10 +656,10 @@ are/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/urw/times/utmri8a.pfb>
 Output written on "/home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheeta
-hStereoVision/Report/egpaper_final.pdf" (4 pages, 1285328 bytes).
+hStereoVision/Report/egpaper_final.pdf" (4 pages, 2607219 bytes).
 PDF statistics:
- 143 PDF objects out of 1000 (max. 8388607)
- 103 compressed objects within 2 object streams
- 27 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 155 PDF objects out of 1000 (max. 8388607)
+ 112 compressed objects within 2 object streams
+ 29 named destinations out of 1000 (max. 500000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

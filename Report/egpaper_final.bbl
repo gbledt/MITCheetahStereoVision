@@ -1,5 +1,12 @@
 \begin{thebibliography}{1}\itemsep=-1pt
 
+\bibitem{Bledt2018}
+G.~Bledt, P.~Wensing, S.~Ingersoll, and S.~Kim.
+\newblock Contact model fusion for event-based locomotion in unstructured
+  terrains.
+\newblock {\em (submitted) 2018 IEEE International Conference on Robotics and
+  Automation (ICRA)}, 2018.
+
 \bibitem{1467526}
 H.~Hirschmuller.
 \newblock Accurate and efficient stereo processing by semi-global matching and
