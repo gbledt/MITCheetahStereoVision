@@ -148,9 +148,6 @@ INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmr7t.tfm
 INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Related-Work.tex
 INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Related-Work.tex
-INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Approach.tex
-INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Approach.tex
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
@@ -168,8 +165,9 @@ INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/times/ptmr7t.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Approach.tex
+INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Approach.tex
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
 INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/Final-Project-Pipeline.png
 INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/Final-Project-Pipeline.png
 INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/Final-Project-Pipeline.png
@@ -193,6 +191,8 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm
 INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/example_stairs_pointcloud.jpg
 INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/example_stairs_pointcloud.jpg
 INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/example_stairs_pointcloud.jpg
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/times/ptmb.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/good_contour_plot_12-7.png
@@ -215,12 +215,6 @@ INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/
 INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/simmons-stereo-pair.jpg
 INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/simmons-stereo-pair.jpg
 INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/simmons-stereo-pair.jpg
-INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/simmons-stairs-depthmap.jpg
-INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/simmons-stairs-depthmap.jpg
-INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/simmons-stairs-depthmap.jpg
-INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/simmons-stairs-ptcloud.jpg
-INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/simmons-stairs-ptcloud.jpg
-INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/simmons-stairs-ptcloud.jpg
 INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/simmons-stairs-diagonal-geom.jpg
 INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/simmons-stairs-diagonal-geom.jpg
 INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/simmons-stairs-diagonal-geom.jpg
@@ -237,20 +231,6 @@ INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/
 INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Conclusion.tex
 INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/IndividualContribution.tex
 INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/IndividualContribution.tex
-INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/simmons-stereo-pair.jpg
-INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/simmons-stereo-pair.jpg
-INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/simmons-stairs-depthmap.jpg
-INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/simmons-stairs-depthmap.jpg
-INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/simmons-stairs-ptcloud.jpg
-INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/simmons-stairs-ptcloud.jpg
-INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/simmons-stairs-diagonal-geom.jpg
-INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/simmons-stairs-diagonal-geom.jpg
-INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Figures/BlockDiagram.pdf
-INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Figures/BlockDiagram.pdf
-INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Figures/RobotStairsRelation.pdf
-INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Figures/RobotStairsRelation.pdf
-INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Figures/RobotStairs.pdf
-INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Figures/RobotStairs.pdf
 INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/egpaper_final.bbl
 INPUT /home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/egpaper_final.bbl
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/ptmri7t.tfm

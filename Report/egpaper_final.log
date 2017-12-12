@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.25)  12 DEC 2017 16:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.25)  12 DEC 2017 17:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -284,29 +284,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 \Hy@SectionHShift=\skip48
 )
 (/home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Repo
-rt/egpaper_final.aux
-
-LaTeX Warning: Label `simmons-pair' multiply defined.
-
-
-LaTeX Warning: Label `simmons-depthmap' multiply defined.
-
-
-LaTeX Warning: Label `simmons-ptcloud' multiply defined.
-
-
-LaTeX Warning: Label `simmons-polytope' multiply defined.
-
-
-LaTeX Warning: Label `fig:BD' multiply defined.
-
-
-LaTeX Warning: Label `fig:RSR' multiply defined.
-
-
-LaTeX Warning: Label `fig:RS' multiply defined.
-
-)
+rt/egpaper_final.aux)
 \openout1 = `egpaper_final.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
@@ -326,8 +304,7 @@ LaTeX Font Info:    ... okay on input line 30.
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 30.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
-)
-ABD: EveryShipout initializing macros
+) ABD: EveryShipout initializing macros
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2016/01/03 v1.1b Standard LaTeX Color (DPC)
 
@@ -413,29 +390,30 @@ Package pdftex.def Info: Figures/RobotIntro.pdf used on input line 11.
 (pdftex.def)             Requested size: 237.13594pt x 124.55435pt.
 )
 (/home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Repo
-rt/Sections/Related-Work.tex)
+rt/Sections/Related-Work.tex) [4321{/var/lib/texmf/fonts/map/pdftex/updmap/pdft
+ex.map}
+
+
+ </home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Rep
+ort/Figures/RobotIntro.pdf>]
 (/home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Repo
 rt/Sections/Approach.tex
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4.
 
 
-LaTeX Warning: Reference `pointcloud-section' on page 4321 undefined on input l
+LaTeX Warning: Reference `pointcloud-section' on page 4322 undefined on input l
 ine 4.
 
-[4321{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
-
- </home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Rep
-ort/Figures/RobotIntro.pdf>]
-<Sections/Figures/Final-Project-Pipeline.png, id=35, 362.35374pt x 422.57875pt>
+<Sections/Figures/Final-Project-Pipeline.png, id=36, 362.35374pt x 422.57875pt>
 File: Sections/Figures/Final-Project-Pipeline.png Graphic file (type png)
 <use Sections/Figures/Final-Project-Pipeline.png>
 Package pdftex.def Info: Sections/Figures/Final-Project-Pipeline.png used on in
 put line 9.
 (pdftex.def)             Requested size: 144.54pt x 168.56424pt.
 
-<Sections/Figures/example_stereo_pair.jpg, id=38, 837.88031pt x 402.75468pt>
+<Sections/Figures/example_stereo_pair.jpg, id=39, 837.88031pt x 402.75468pt>
 File: Sections/Figures/example_stereo_pair.jpg Graphic file (type jpg)
 
 <use Sections/Figures/example_stereo_pair.jpg>
@@ -447,26 +425,25 @@ Overfull \hbox (1.35527pt too wide) in paragraph at lines 18--19
  [][] 
  []
 
-<Sections/Figures/stereo_anaglyph.png, id=39, 673.76718pt x 512.66531pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Sections/Figures/stereo_anaglyph.png, id=40, 425.33907pt x 375.65344pt>
 File: Sections/Figures/stereo_anaglyph.png Graphic file (type png)
 
 <use Sections/Figures/stereo_anaglyph.png>
 Package pdftex.def Info: Sections/Figures/stereo_anaglyph.png used on input lin
 e 25.
-(pdftex.def)             Requested size: 238.49121pt x 181.46942pt.
-
-Overfull \hbox (1.35527pt too wide) in paragraph at lines 25--26
- [][] 
- []
+(pdftex.def)             Requested size: 166.2212pt x 146.8023pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 2050) has occurred while \output is active []
 
 
-<Sections/Figures/example_stairs_pointcloud.jpg, id=42, 1405.25pt x 1053.9375pt
+<Sections/Figures/example_stairs_pointcloud.jpg, id=43, 1405.25pt x 1053.9375pt
 >
 File: Sections/Figures/example_stairs_pointcloud.jpg Graphic file (type jpg)
  <use Sections/Figures/example_stairs_pointcloud.jpg>
@@ -485,129 +462,81 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 n/Report/Sections/Figures/Final-Project-Pipeline.png> </home/gbledt/MIT/Fall 20
 17/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/examp
 le_stereo_pair.jpg> </home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITChee
-tahStereoVision/Report/Sections/Figures/stereo_anaglyph.png (PNG copy)>]
-<Sections/Figures/good_contour_plot_12-7.png, id=70, 1053.9375pt x 790.45313pt>
+tahStereoVision/Report/Sections/Figures/stereo_anaglyph.png>]
+<Sections/Figures/good_contour_plot_12-7.png, id=73, 1053.9375pt x 790.45313pt>
 File: Sections/Figures/good_contour_plot_12-7.png Graphic file (type png)
 <use Sections/Figures/good_contour_plot_12-7.png>
 Package pdftex.def Info: Sections/Figures/good_contour_plot_12-7.png used on in
-put line 62.
-(pdftex.def)             Requested size: 238.49121pt x 178.86949pt.
+put line 64.
+(pdftex.def)             Requested size: 180.67499pt x 135.49695pt.
 
-Overfull \hbox (1.35527pt too wide) in paragraph at lines 62--63
- [][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \hbox (badness 1845) in paragraph at lines 75--75
+Underfull \hbox (badness 1845) in paragraph at lines 77--77
 [] \elvbf . Poly-tope Re-con-struc-tion from Un-ordered
  []
 
-<Sections/Figures/polytope_example.png, id=74, 821.31844pt x 713.66624pt>
+[4323 </home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVisio
+n/Report/Sections/Figures/example_stairs_pointcloud.jpg> </home/gbledt/MIT/Fall
+ 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/go
+od_contour_plot_12-7.png (PNG copy)>]
+<Sections/Figures/polytope_example.png, id=87, 821.31844pt x 713.66624pt>
 File: Sections/Figures/polytope_example.png Graphic file (type png)
 
 <use Sections/Figures/polytope_example.png>
 Package pdftex.def Info: Sections/Figures/polytope_example.png used on input li
-ne 83.
-(pdftex.def)             Requested size: 238.49121pt x 207.23015pt.
+ne 85.
+(pdftex.def)             Requested size: 180.67499pt x 156.98528pt.
 
-Overfull \hbox (1.35527pt too wide) in paragraph at lines 83--84
- [][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<Sections/Figures/polytope_sideview.png, id=79, 1053.9375pt x 790.45313pt>
+<Sections/Figures/polytope_sideview.png, id=92, 1053.9375pt x 790.45313pt>
 File: Sections/Figures/polytope_sideview.png Graphic file (type png)
 
 <use Sections/Figures/polytope_sideview.png>
 Package pdftex.def Info: Sections/Figures/polytope_sideview.png used on input l
-ine 90.
-(pdftex.def)             Requested size: 238.49121pt x 178.86949pt.
+ine 92.
+(pdftex.def)             Requested size: 180.67499pt x 135.49695pt.
 
-Overfull \hbox (1.35527pt too wide) in paragraph at lines 90--91
- [][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-<Sections/Figures/polytope_diagonal_geom.jpg, id=83, 931.22906pt x 642.14906pt>
+<Sections/Figures/polytope_diagonal_geom.jpg, id=96, 931.22906pt x 642.14906pt>
 File: Sections/Figures/polytope_diagonal_geom.jpg Graphic file (type jpg)
 <use Sections/Figures/polytope_diagonal_geom.jpg>
 Package pdftex.def Info: Sections/Figures/polytope_diagonal_geom.jpg used on in
-put line 100.
+put line 102.
 (pdftex.def)             Requested size: 238.49121pt x 164.45622pt.
 
-Overfull \hbox (1.35527pt too wide) in paragraph at lines 100--101
+Overfull \hbox (1.35527pt too wide) in paragraph at lines 102--103
  [][] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Sections/Figures/geom_sideview_2d.jpg, id=90, 1405.25pt x 1053.9375pt>
+<Sections/Figures/geom_sideview_2d.jpg, id=103, 1405.25pt x 1053.9375pt>
 File: Sections/Figures/geom_sideview_2d.jpg Graphic file (type jpg)
 
 <use Sections/Figures/geom_sideview_2d.jpg>
 Package pdftex.def Info: Sections/Figures/geom_sideview_2d.jpg used on input li
-ne 107.
-(pdftex.def)             Requested size: 238.49121pt x 178.86145pt.
-
-Overfull \hbox (1.35527pt too wide) in paragraph at lines 107--108
- [][] 
- []
+ne 109.
+(pdftex.def)             Requested size: 180.67499pt x 135.50499pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [4323 </home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVis
-ion/Report/Sections/Figures/example_stairs_pointcloud.jpg> </home/gbledt/MIT/Fa
-ll 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/
-good_contour_plot_12-7.png (PNG copy)>]
+)
 (/home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Repo
 rt/Sections/Results.tex
-<Sections/Figures/simmons-stereo-pair.jpg, id=106, 1049.42062pt x 446.41782pt>
+<Sections/Figures/simmons-stereo-pair.jpg, id=112, 1049.42062pt x 446.41782pt>
 File: Sections/Figures/simmons-stereo-pair.jpg Graphic file (type jpg)
 
 <use Sections/Figures/simmons-stereo-pair.jpg>
 Package pdftex.def Info: Sections/Figures/simmons-stereo-pair.jpg used on input
  line 11.
 (pdftex.def)             Requested size: 237.13594pt x 100.87563pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-<Sections/Figures/simmons-stairs-depthmap.jpg, id=109, 409.53pt x 308.65312pt>
-File: Sections/Figures/simmons-stairs-depthmap.jpg Graphic file (type jpg)
-
-<use Sections/Figures/simmons-stairs-depthmap.jpg>
-Package pdftex.def Info: Sections/Figures/simmons-stairs-depthmap.jpg used on i
-nput line 18.
-(pdftex.def)             Requested size: 144.54pt x 108.93916pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-<Sections/Figures/simmons-stairs-ptcloud.jpg, id=112, 619.56468pt x 528.47438pt
->
-File: Sections/Figures/simmons-stairs-ptcloud.jpg Graphic file (type jpg)
- <use Sections/Figures/simmons-stairs-ptcloud.jpg>
-Package pdftex.def Info: Sections/Figures/simmons-stairs-ptcloud.jpg used on in
-put line 25.
-(pdftex.def)             Requested size: 237.13594pt x 202.26578pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-<Sections/Figures/simmons-stairs-diagonal-geom.jpg, id=113, 779.91376pt x 593.9
+ [4324 </home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVisi
+on/Report/Sections/Figures/polytope_example.png> </home/gbledt/MIT/Fall 2017/6.
+869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/polytope_s
+ideview.png (PNG copy)> </home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MIT
+CheetahStereoVision/Report/Sections/Figures/polytope_diagonal_geom.jpg> </home/
+gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sect
+ions/Figures/geom_sideview_2d.jpg>]
+<Sections/Figures/simmons-stairs-diagonal-geom.jpg, id=125, 779.91376pt x 593.9
 6906pt>
 File: Sections/Figures/simmons-stairs-diagonal-geom.jpg Graphic file (type jpg)
 
@@ -616,22 +545,16 @@ Package pdftex.def Info: Sections/Figures/simmons-stairs-diagonal-geom.jpg used
  on input line 32.
 (pdftex.def)             Requested size: 237.13594pt x 180.59384pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<Figures/BlockDiagram.pdf, id=115, 862.22125pt x 302.12875pt>
+<Figures/BlockDiagram.pdf, id=127, 862.22125pt x 302.12875pt>
 File: Figures/BlockDiagram.pdf Graphic file (type pdf)
 
 <use Figures/BlockDiagram.pdf>
 Package pdftex.def Info: Figures/BlockDiagram.pdf used on input line 42.
 (pdftex.def)             Requested size: 237.13594pt x 83.09258pt.
- [4324 </home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVisi
-on/Report/Sections/Figures/polytope_example.png> </home/gbledt/MIT/Fall 2017/6.
-869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/polytope_s
-ideview.png (PNG copy)> </home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MIT
-CheetahStereoVision/Report/Sections/Figures/polytope_diagonal_geom.jpg> </home/
-gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Sect
-ions/Figures/geom_sideview_2d.jpg>]
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 ! Undefined control sequence.
 l.47 ...in the 3D camera frame, ${}^\mathcal{C}\bm
                                                   {p}_o$, and apply the foll...
@@ -677,16 +600,13 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<Figures/RobotStairsRelation.pdf, id=128, 611.28375pt x 380.42125pt>
+<Figures/RobotStairsRelation.pdf, id=129, 611.28375pt x 380.42125pt>
 File: Figures/RobotStairsRelation.pdf Graphic file (type pdf)
 
 <use Figures/RobotStairsRelation.pdf>
 Package pdftex.def Info: Figures/RobotStairsRelation.pdf used on input line 56.
 
 (pdftex.def)             Requested size: 237.13594pt x 147.57423pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 ! Undefined control sequence.
 l.62 ({}^\Psi\bm
@@ -727,180 +647,30 @@ and I'll forget about whatever was undefined.
 [4325 </home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVisio
 n/Report/Sections/Figures/simmons-stereo-pair.jpg> </home/gbledt/MIT/Fall 2017/
 6.869 - Computer Vision/MITCheetahStereoVision/Report/Sections/Figures/simmons-
-stairs-depthmap.jpg> </home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITChe
-etahStereoVision/Report/Sections/Figures/simmons-stairs-ptcloud.jpg> </home/gbl
-edt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Section
-s/Figures/simmons-stairs-diagonal-geom.jpg> </home/gbledt/MIT/Fall 2017/6.869 -
- Computer Vision/MITCheetahStereoVision/Report/Figures/BlockDiagram.pdf>]
-<Figures/RobotStairs.pdf, id=152, 455.7025pt x 415.5525pt>
+stairs-diagonal-geom.jpg> </home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/M
+ITCheetahStereoVision/Report/Figures/BlockDiagram.pdf> </home/gbledt/MIT/Fall 2
+017/6.869 - Computer Vision/MITCheetahStereoVision/Report/Figures/RobotStairsRe
+lation.pdf
+
+pdfTeX warning: pdflatex (file /home/gbledt/MIT/Fall 2017/6.869 - Computer Visi
+on/MITCheetahStereoVision/Report/Figures/RobotStairsRelation.pdf): PDF inclusio
+n: multiple pdfs with page group included in a single page
+>] <Figures/RobotStairs.pdf, id=156, 455.7025pt x 415.5525pt>
 File: Figures/RobotStairs.pdf Graphic file (type pdf)
 
 <use Figures/RobotStairs.pdf>
 Package pdftex.def Info: Figures/RobotStairs.pdf used on input line 72.
 (pdftex.def)             Requested size: 201.56699pt x 183.80746pt.
 )
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
 (/home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Repo
 rt/Sections/Conclusion.tex)
 (/home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Repo
-rt/Sections/IndividualContribution.tex
-File: Sections/Figures/simmons-stereo-pair.jpg Graphic file (type jpg)
-
-<use Sections/Figures/simmons-stereo-pair.jpg>
-Package pdftex.def Info: Sections/Figures/simmons-stereo-pair.jpg used on input
- line 11.
-(pdftex.def)             Requested size: 237.13594pt x 100.87563pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-File: Sections/Figures/simmons-stairs-depthmap.jpg Graphic file (type jpg)
-<use Sections/Figures/simmons-stairs-depthmap.jpg>
-Package pdftex.def Info: Sections/Figures/simmons-stairs-depthmap.jpg used on i
-nput line 18.
-(pdftex.def)             Requested size: 144.54pt x 108.93916pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-File: Sections/Figures/simmons-stairs-ptcloud.jpg Graphic file (type jpg)
-<use Sections/Figures/simmons-stairs-ptcloud.jpg>
-Package pdftex.def Info: Sections/Figures/simmons-stairs-ptcloud.jpg used on in
-put line 25.
-(pdftex.def)             Requested size: 237.13594pt x 202.26578pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-File: Sections/Figures/simmons-stairs-diagonal-geom.jpg Graphic file (type jpg)
-
-<use Sections/Figures/simmons-stairs-diagonal-geom.jpg>
-Package pdftex.def Info: Sections/Figures/simmons-stairs-diagonal-geom.jpg used
- on input line 32.
-(pdftex.def)             Requested size: 237.13594pt x 180.59384pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-File: Figures/BlockDiagram.pdf Graphic file (type pdf)
-<use Figures/BlockDiagram.pdf>
-Package pdftex.def Info: Figures/BlockDiagram.pdf used on input line 42.
-(pdftex.def)             Requested size: 237.13594pt x 83.09258pt.
- [4326 </home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVisi
-on/Report/Figures/RobotStairsRelation.pdf> </home/gbledt/MIT/Fall 2017/6.869 - 
-Computer Vision/MITCheetahStereoVision/Report/Figures/RobotStairs.pdf
-
-pdfTeX warning: pdflatex (file /home/gbledt/MIT/Fall 2017/6.869 - Computer Visi
-on/MITCheetahStereoVision/Report/Figures/RobotStairs.pdf): PDF inclusion: multi
-ple pdfs with page group included in a single page
->]
-! Undefined control sequence.
-l.47 ...in the 3D camera frame, ${}^\mathcal{C}\bm
-                                                  {p}_o$, and apply the foll...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.50 {}^\mathcal{I}\bm
-                      {p}_o = {}^\mathcal{I}\bm{H}_\mathcal{C}{}^\mathcal{C}...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.50 {}^\mathcal{I}\bm{p}_o = {}^\mathcal{I}\bm
-                                               {H}_\mathcal{C}{}^\mathcal{C}...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.50 ...hcal{I}\bm{H}_\mathcal{C}{}^\mathcal{C}\bm
-                                                  {p}_o
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.53 where ${}^\mathcal{I}\bm
-                             {H}_\mathcal{C}$ is the homogeneous transformat...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-File: Figures/RobotStairsRelation.pdf Graphic file (type pdf)
-<use Figures/RobotStairsRelation.pdf>
-Package pdftex.def Info: Figures/RobotStairsRelation.pdf used on input line 56.
-
-(pdftex.def)             Requested size: 237.13594pt x 147.57423pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[4327]
-! Undefined control sequence.
-l.62 ({}^\Psi\bm
-                {p}_{CoM,x} - {}^\Psi\bm{p}_{0,x}) < (d - d_{buffer})
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.62 ({}^\Psi\bm{p}_{CoM,x} - {}^\Psi\bm
-                                        {p}_{0,x}) < (d - d_{buffer})
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.64 where ${}^\Psi\bm
-                      {p}_{CoM,x}$ is the yaw rotated CoM position ignoring ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.64 ...noring pitch and roll effects, ${}^\Psi\bm
-                                                  {p}_{0,x}$ is the yaw rota...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-File: Figures/RobotStairs.pdf Graphic file (type pdf)
-<use Figures/RobotStairs.pdf>
-Package pdftex.def Info: Figures/RobotStairs.pdf used on input line 72.
-(pdftex.def)             Requested size: 201.56699pt x 183.80746pt.
-)
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
+rt/Sections/IndividualContribution.tex)
 (/home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Repo
 rt/egpaper_final.bbl)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 79.
- [4328]
+ [4326 </home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVisi
+on/Report/Figures/RobotStairs.pdf>]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 79.
 
 (/home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheetahStereoVision/Repo
@@ -911,19 +681,16 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 79.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 79.
  ) 
 Here is how much of TeX's memory you used:
- 6486 strings out of 493029
- 97558 string characters out of 6136234
- 186104 words of memory out of 5000000
- 9820 multiletter control sequences out of 15000+600000
+ 6465 strings out of 493029
+ 97078 string characters out of 6136234
+ 182824 words of memory out of 5000000
+ 9813 multiletter control sequences out of 15000+600000
  29161 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,9n,26p,1201b,336s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,9n,26p,1201b,349s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
@@ -939,10 +706,10 @@ s/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/tim
 es/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
 
 Output written on "/home/gbledt/MIT/Fall 2017/6.869 - Computer Vision/MITCheeta
-hStereoVision/Report/egpaper_final.pdf" (8 pages, 3174995 bytes).
+hStereoVision/Report/egpaper_final.pdf" (6 pages, 3254310 bytes).
 PDF statistics:
- 262 PDF objects out of 1000 (max. 8388607)
- 197 compressed objects within 2 object streams
- 57 named destinations out of 1000 (max. 500000)
- 86 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 230 PDF objects out of 1000 (max. 8388607)
+ 172 compressed objects within 2 object streams
+ 45 named destinations out of 1000 (max. 500000)
+ 76 words of extra memory for PDF output out of 10000 (max. 10000000)
 

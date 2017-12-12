@@ -17,14 +17,15 @@
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
 \citation{Bledt2018}
+\citation{5152795}
+\citation{DBLP:conf/humanoids/FallonMDWAMT15}
+\citation{journals/js/HamzahI16}
 \@writefile{toc}{\contentsline {section}{\numberline {1}\hskip -1em.\nobreakspace  {}Introduction}{4321}{section.1}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces A robust controller is used for general robot locomotion in unstructured terrains, but a method of external environment sensing is needed for the robot to know that its nominal foot swing trajectory will not be able to clear the stair obstacle.}}{4321}{figure.1}}
 \newlabel{fig:RI}{{1}{4321}{A robust controller is used for general robot locomotion in unstructured terrains, but a method of external environment sensing is needed for the robot to know that its nominal foot swing trajectory will not be able to clear the stair obstacle}{figure.1}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {2}\hskip -1em.\nobreakspace  {}Related Work}{4321}{section.2}}
-\@writefile{toc}{\contentsline {section}{\numberline {3}\hskip -1em.\nobreakspace  {}Approach}{4321}{section.3}}
 \citation{1467526}
-\citation{msac-article}
-\citation{msac-article}
+\@writefile{toc}{\contentsline {section}{\numberline {3}\hskip -1em.\nobreakspace  {}Approach}{4322}{section.3}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces An overview of our obstacle reconstruction pipeline.}}{4322}{figure.2}}
 \newlabel{overview-diagram}{{2}{4322}{An overview of our obstacle reconstruction pipeline}{figure.2}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1}\hskip -1em.\nobreakspace  {}Stereo Matching for 3D Pointcloud}{4322}{subsection.3.1}}
@@ -33,65 +34,50 @@
 \newlabel{stereo-image-pair}{{3}{4322}{Am image pair taken by our stereo camera setup. The two cameras are parallel and have a baseline of approximately 8cm}{figure.3}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces An example stereo anaglyph.}}{4322}{figure.4}}
 \newlabel{stereo-anaglyph}{{4}{4322}{An example stereo anaglyph}{figure.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}\hskip -1em.\nobreakspace  {}Planar Decomposition of Point Clouds}{4322}{subsection.3.2}}
-\newlabel{plane-section}{{3.2}{4322}{\hskip -1em.~Planar Decomposition of Point Clouds}{subsection.3.2}{}}
+\citation{msac-article}
+\citation{msac-article}
 \citation{pavlidis}
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces A pointcloud representation of the stairs in Figure \ref  {stereo-image-pair}.}}{4323}{figure.5}}
 \newlabel{pointcloud-example}{{5}{4323}{A pointcloud representation of the stairs in Figure \ref {stereo-image-pair}}{figure.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}\hskip -1em.\nobreakspace  {}Planar Decomposition of Point Clouds}{4323}{subsection.3.2}}
+\newlabel{plane-section}{{3.2}{4323}{\hskip -1em.~Planar Decomposition of Point Clouds}{subsection.3.2}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1}Contour Method}{4323}{subsubsection.3.2.1}}
 \newlabel{contour-method}{{3.2.1}{4323}{Contour Method}{subsubsection.3.2.1}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2}Orientation Method}{4323}{subsubsection.3.2.2}}
-\newlabel{orient-method}{{3.2.2}{4323}{Orientation Method}{subsubsection.3.2.2}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces An example contour plot of the stairs in Figure \ref  {stereo-anaglyph}. Here we have shown the eight largest contours in the image by area.}}{4323}{figure.6}}
 \newlabel{contours-example}{{6}{4323}{An example contour plot of the stairs in Figure \ref {stereo-anaglyph}. Here we have shown the eight largest contours in the image by area}{figure.6}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2}Orientation Method}{4323}{subsubsection.3.2.2}}
+\newlabel{orient-method}{{3.2.2}{4323}{Orientation Method}{subsubsection.3.2.2}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3}\hskip -1em.\nobreakspace  {}Polytope Reconstruction from Unordered Planes}{4323}{subsection.3.3}}
 \newlabel{polytope-section}{{3.3}{4323}{\hskip -1em.~Polytope Reconstruction from Unordered Planes}{subsection.3.3}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces A polytope reconstruction of the image in Figure \ref  {stereo-image-pair}, using the Contour Method (See Section \ref  {contour-method}). The pink, red, and blue planes correspond to horizontal faces of the stairs. The light-blue, green, and yellow planes are vertical faces.}}{4324}{figure.7}}
 \newlabel{polytope-diagonal-contour}{{7}{4324}{A polytope reconstruction of the image in Figure \ref {stereo-image-pair}, using the Contour Method (See Section \ref {contour-method}). The pink, red, and blue planes correspond to horizontal faces of the stairs. The light-blue, green, and yellow planes are vertical faces}{figure.7}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces The polytope from Figure \ref  {polytope-diagonal-contour} viewed from the side. The vertical faces of this polytope (light-blue, green, yellow) are very close to the groundtruth dimension of 20cm. Similarly, the remaining horizontal faces are close to their groundtruth dimension of 31cm. Note that the pink plane is cut off by a bounding box around the polytope, so it does not appear to be the correct size.}}{4324}{figure.8}}
-\newlabel{polytope-sideview-contour}{{8}{4324}{The polytope from Figure \ref {polytope-diagonal-contour} viewed from the side. The vertical faces of this polytope (light-blue, green, yellow) are very close to the groundtruth dimension of 20cm. Similarly, the remaining horizontal faces are close to their groundtruth dimension of 31cm. Note that the pink plane is cut off by a bounding box around the polytope, so it does not appear to be the correct size}{figure.8}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}\hskip -1em.\nobreakspace  {}Results}{4324}{section.4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}\hskip -1em.\nobreakspace  {}Testing with Other Obstacles}{4324}{subsection.4.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces The polytope from Figure \ref  {polytope-diagonal-contour} viewed from the side. The vertical faces of this polytope (light-blue, green, yellow) are very close to the groundtruth dimension of 20cm. Similarly, the remaining horizontal faces are close to their groundtruth dimension of 31cm.}}{4324}{figure.8}}
+\newlabel{polytope-sideview-contour}{{8}{4324}{The polytope from Figure \ref {polytope-diagonal-contour} viewed from the side. The vertical faces of this polytope (light-blue, green, yellow) are very close to the groundtruth dimension of 20cm. Similarly, the remaining horizontal faces are close to their groundtruth dimension of 31cm}{figure.8}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces A polytope reconstruction of the image in Figure \ref  {stereo-image-pair}, using the Orientation Method (See Section \ref  {orient-method}). Here, the pink, red, and blue planes are vertical, and the light-blue, green, and yellow are horizontal. Because the orientation method is not limited by image contours, we are able to construct a polytope with more faces than in Figure \ref  {polytope-diagonal-contour}}}{4324}{figure.9}}
 \newlabel{polytope-diagonal-orient}{{9}{4324}{A polytope reconstruction of the image in Figure \ref {stereo-image-pair}, using the Orientation Method (See Section \ref {orient-method}). Here, the pink, red, and blue planes are vertical, and the light-blue, green, and yellow are horizontal. Because the orientation method is not limited by image contours, we are able to construct a polytope with more faces than in Figure \ref {polytope-diagonal-contour}}{figure.9}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces The polytope from Figure \ref  {polytope-diagonal-orient} viewed from the side. Again, we see that vertical and horizontal planes are close to the groundtruth dimensions of 20cm and 31cm, respectively.}}{4324}{figure.10}}
-\newlabel{polytope-sideview-orient}{{10}{4324}{The polytope from Figure \ref {polytope-diagonal-orient} viewed from the side. Again, we see that vertical and horizontal planes are close to the groundtruth dimensions of 20cm and 31cm, respectively}{figure.10}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}\hskip -1em.\nobreakspace  {}Testing with the Cheetah 3}{4324}{subsection.4.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces A set of stairs from Simmons Hall. Notice that these stairs have a smooth texture compared to the stairs from Figure \ref  {stereo-image-pair}.}}{4325}{figure.11}}
-\newlabel{simmons-pair}{{11}{4325}{A set of stairs from Simmons Hall. Notice that these stairs have a smooth texture compared to the stairs from Figure \ref {stereo-image-pair}}{figure.11}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces The depthmap of the stairs in Figure \ref  {simmons-pair}. Despite considerable noise in this depthmap due to a lack of texture on the stairs, our algorithm manages to construct a polytope.}}{4325}{figure.12}}
-\newlabel{simmons-depthmap}{{12}{4325}{The depthmap of the stairs in Figure \ref {simmons-pair}. Despite considerable noise in this depthmap due to a lack of texture on the stairs, our algorithm manages to construct a polytope}{figure.12}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces A pointcloud of the Simmons stairs.}}{4325}{figure.13}}
-\newlabel{simmons-ptcloud}{{13}{4325}{A pointcloud of the Simmons stairs}{figure.13}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces The final polytope reconstruction of the Simmons stairs. }}{4325}{figure.14}}
-\newlabel{simmons-polytope}{{14}{4325}{The final polytope reconstruction of the Simmons stairs}{figure.14}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces .}}{4325}{figure.15}}
-\newlabel{fig:BD}{{15}{4325}{}{figure.15}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces The robot must transform the coordinates of the stairs in the 3D reconstructed camera frame into the world frame in relation to the robot.}}{4326}{figure.16}}
-\newlabel{fig:RSR}{{16}{4326}{The robot must transform the coordinates of the stairs in the 3D reconstructed camera frame into the world frame in relation to the robot}{figure.16}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}\hskip -1em.\nobreakspace  {}Conclusion}{4326}{section.5}}
-\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces With the vision input, the robot is able to stably figure out how high to raise the feet in order to place them onto the stairs and successfully climb up.}}{4326}{figure.17}}
-\newlabel{fig:RS}{{17}{4326}{With the vision input, the robot is able to stably figure out how high to raise the feet in order to place them onto the stairs and successfully climb up}{figure.17}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}\hskip -1em.\nobreakspace  {}Results}{4326}{section.6}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}\hskip -1em.\nobreakspace  {}Testing with Other Obstacles}{4326}{subsection.6.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {18}{\ignorespaces A set of stairs from Simmons Hall. Notice that these stairs have a smooth texture compared to the stairs from Figure \ref  {stereo-image-pair}.}}{4327}{figure.18}}
-\newlabel{simmons-pair}{{18}{4327}{A set of stairs from Simmons Hall. Notice that these stairs have a smooth texture compared to the stairs from Figure \ref {stereo-image-pair}}{figure.18}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces The depthmap of the stairs in Figure \ref  {simmons-pair}. Despite considerable noise in this depthmap due to a lack of texture on the stairs, our algorithm manages to construct a polytope.}}{4327}{figure.19}}
-\newlabel{simmons-depthmap}{{19}{4327}{The depthmap of the stairs in Figure \ref {simmons-pair}. Despite considerable noise in this depthmap due to a lack of texture on the stairs, our algorithm manages to construct a polytope}{figure.19}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces A pointcloud of the Simmons stairs.}}{4327}{figure.20}}
-\newlabel{simmons-ptcloud}{{20}{4327}{A pointcloud of the Simmons stairs}{figure.20}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}\hskip -1em.\nobreakspace  {}Testing with the Cheetah 3}{4327}{subsection.6.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces The final polytope reconstruction of the Simmons stairs. }}{4327}{figure.21}}
-\newlabel{simmons-polytope}{{21}{4327}{The final polytope reconstruction of the Simmons stairs}{figure.21}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces .}}{4327}{figure.22}}
-\newlabel{fig:BD}{{22}{4327}{}{figure.22}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces The polytope from Figure \ref  {polytope-diagonal-orient} viewed from the side. Again, we see that vertical and horizontal planes are close to the groundtruth dimensions.}}{4324}{figure.10}}
+\newlabel{polytope-sideview-orient}{{10}{4324}{The polytope from Figure \ref {polytope-diagonal-orient} viewed from the side. Again, we see that vertical and horizontal planes are close to the groundtruth dimensions}{figure.10}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}\hskip -1em.\nobreakspace  {}Results}{4324}{section.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}\hskip -1em.\nobreakspace  {}Testing with Other Obstacles}{4324}{subsection.4.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces A set of stairs from Simmons Hall. Notice that these stairs have less texture and smoother edges than the stairs from Figure \ref  {stereo-image-pair}, causing the Contour Method to perform poorly.}}{4325}{figure.11}}
+\newlabel{simmons-pair}{{11}{4325}{A set of stairs from Simmons Hall. Notice that these stairs have less texture and smoother edges than the stairs from Figure \ref {stereo-image-pair}, causing the Contour Method to perform poorly}{figure.11}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces The final polytope reconstruction of the Simmons stairs. }}{4325}{figure.12}}
+\newlabel{simmons-polytope}{{12}{4325}{The final polytope reconstruction of the Simmons stairs}{figure.12}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}\hskip -1em.\nobreakspace  {}Testing with the Cheetah 3}{4325}{subsection.4.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces .}}{4325}{figure.13}}
+\newlabel{fig:BD}{{13}{4325}{}{figure.13}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces The robot must transform the coordinates of the stairs in the 3D reconstructed camera frame into the world frame in relation to the robot.}}{4325}{figure.14}}
+\newlabel{fig:RSR}{{14}{4325}{The robot must transform the coordinates of the stairs in the 3D reconstructed camera frame into the world frame in relation to the robot}{figure.14}{}}
 \bibstyle{ieee}
 \bibdata{egbib}
 \bibcite{Bledt2018}{1}
-\bibcite{1467526}{2}
-\bibcite{pavlidis}{3}
-\bibcite{msac-article}{4}
-\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces The robot must transform the coordinates of the stairs in the 3D reconstructed camera frame into the world frame in relation to the robot.}}{4328}{figure.23}}
-\newlabel{fig:RSR}{{23}{4328}{The robot must transform the coordinates of the stairs in the 3D reconstructed camera frame into the world frame in relation to the robot}{figure.23}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {24}{\ignorespaces With the vision input, the robot is able to stably figure out how high to raise the feet in order to place them onto the stairs and successfully climb up.}}{4328}{figure.24}}
-\newlabel{fig:RS}{{24}{4328}{With the vision input, the robot is able to stably figure out how high to raise the feet in order to place them onto the stairs and successfully climb up}{figure.24}{}}
+\bibcite{DBLP:conf/humanoids/FallonMDWAMT15}{2}
+\bibcite{journals/js/HamzahI16}{3}
+\bibcite{1467526}{4}
+\bibcite{5152795}{5}
+\bibcite{pavlidis}{6}
+\bibcite{msac-article}{7}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces With the vision input, the robot is able to stably figure out how high to raise the feet in order to place them onto the stairs and successfully climb up.}}{4326}{figure.15}}
+\newlabel{fig:RS}{{15}{4326}{With the vision input, the robot is able to stably figure out how high to raise the feet in order to place them onto the stairs and successfully climb up}{figure.15}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}\hskip -1em.\nobreakspace  {}Conclusion}{4326}{section.5}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}\hskip -1em.\nobreakspace  {}Individual Contribution}{4326}{section.6}}
