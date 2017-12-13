@@ -40,6 +40,8 @@ Our pipeline is summarized in Figure \ref{overview-diagram}. We begin with a pai
 
 In order to estimate a polytope representation of an obstacle, decompose its point cloud into a set of planes. We demonstrate two main approaches for finding planar surfaces of an obstacle. We describe the Contour Method in Section \ref{contour-method} and the Orientation Method in \ref{orient-method}.
 
+Each method has its advantages and limitations. While the Contour Method can generalize to planar surfaces with arbitary orientation, it is highly sensitive to the texture and edges of obstacles. The Orientation Method is more robust to appearance, but is limited to vertical and horizontal planes.
+
 In both approaches, MSAC (M-Estimator SAmple Consensus \cite{msac-article}) is the algorithm used for plane estimation. In \cite{msac-article}, Zisserman et. al. show that MSAC is more robust than RANSAC for estimating geometric relationships in point cloud data, at no additional computational cost.
 
 \subsubsection{Contour Method} \label{contour-method}
